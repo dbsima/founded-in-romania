@@ -7,7 +7,7 @@ from flask.ext import admin, login
 from flask.ext.admin.contrib import sqla
 from flask.ext.admin import helpers, expose
 from werkzeug.security import generate_password_hash, check_password_hash
-
+from jinja2 import Markup
 # Create Flask application
 app = Flask(__name__)
 
@@ -44,6 +44,55 @@ class User(db.Model):
     def __unicode__(self):
         return self.username
 
+    
+# Create Company model.
+class Company(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    # about the company
+    name = db.Column(db.String(80))
+    url = db.Column(db.String(180))
+    twitter = db.Column(db.String(64))
+    founded_year = db.Column(db.Integer)
+    # logo
+    logo_submited = db.Column(db.String(180))
+    logo_accepted = db.Column(db.String(180))
+    # contact
+    contact_email = db.Column(db.String(120))
+    contact_name = db.Column(db.String(120))
+    # administrative stuff
+    date_submit = db.Column(db.DateTime)
+    date_accept = db.Column(db.DateTime)
+    status = db.Column(db.String(64))
+
+    # Required for administrative interface
+    def __unicode__(self):
+        return self.name
+
+
+# Create customized model view class
+class UserView(sqla.ModelView):
+
+    def is_accessible(self):
+        return login.current_user.is_authenticated()
+
+
+class CompanyView(sqla.ModelView):
+    #form_excluded_columns = ['path_to_logo', 'contact_name', 'twitter', 'founded_year', 'date_submit', ]
+    
+    def is_accessible(self):
+        return login.current_user.is_authenticated()
+    
+    def _list_href(view, context, model, name):
+        if not model.logo_submited:
+            return ''
+
+        return Markup('<a href="'+model.logo_submited+'" target="_blank">URL</a>')
+
+    column_formatters = {
+        'logo_submited': _list_href
+    }
+
+
 
 # Define login and registration forms (for flask-login)
 class LoginForm(form.Form):
@@ -77,11 +126,7 @@ def init_login():
         return db.session.query(User).get(user_id)
 
 
-# Create customized model view class
-class MyModelView(sqla.ModelView):
 
-    def is_accessible(self):
-        return login.current_user.is_authenticated()
 
 
 # Create customized index view class that handles login & registration
@@ -126,7 +171,7 @@ init_login()
 admin = admin.Admin(app, 'Auth', index_view=MyAdminIndexView(), base_template='my_master.html')
 
 # Add view
-admin.add_view(MyModelView(User, db.session))
+admin.add_view(CompanyView(Company, db.session))
 
 
 def build_sample_db():
@@ -136,6 +181,7 @@ def build_sample_db():
 
     import string
     import random
+    import datetime
 
     db.drop_all()
     db.create_all()
@@ -143,26 +189,20 @@ def build_sample_db():
     # test_user = User(login="test", password="test")
     test_user = User(login="test", password=generate_password_hash("test"))
     db.session.add(test_user)
-
-    first_names = [
-        'Harry', 'Amelia', 'Oliver', 'Jack', 'Isabella', 'Charlie','Sophie', 'Mia',
-        'Jacob', 'Thomas', 'Emily', 'Lily', 'Ava', 'Isla', 'Alfie', 'Olivia', 'Jessica',
-        'Riley', 'William', 'James', 'Geoffrey', 'Lisa', 'Benjamin', 'Stacey', 'Lucy'
-    ]
-    last_names = [
-        'Brown', 'Smith', 'Patel', 'Jones', 'Williams', 'Johnson', 'Taylor', 'Thomas',
-        'Roberts', 'Khan', 'Lewis', 'Jackson', 'Clarke', 'James', 'Phillips', 'Wilson',
-        'Ali', 'Mason', 'Mitchell', 'Rose', 'Davis', 'Davies', 'Rodriguez', 'Cox', 'Alexander'
-    ]
-
-    for i in range(len(first_names)):
-        user = User()
-        user.first_name = first_names[i]
-        user.last_name = last_names[i]
-        user.login = user.first_name.lower()
-        user.email = user.login + "@example.com"
-        user.password = generate_password_hash(''.join(random.choice(string.ascii_lowercase + string.digits) for i in range(10)))
-        db.session.add(user)
+    
+    tmp = int(1000*random.random())
+    
+    test_company = Company(name="Google",
+                           url="www.google.com",
+                           logo_submited="https://www.dropbox.com/s/0yg92hm0lhjsned/1743570_680591551991656_1712274378_n.jpg?dl=0",
+                           logo_accepted="",
+                           contact_email="test@google.com",
+                           contact_name = "Sergey",
+                           twitter = "@larry",
+                           founded_year = 1998,
+                           date_submit = datetime.datetime.now(),
+                           status="pending")
+    db.session.add(test_company)
 
     db.session.commit()
     return
