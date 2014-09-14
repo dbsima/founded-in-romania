@@ -82,14 +82,28 @@ class CompanyView(sqla.ModelView):
     def is_accessible(self):
         return login.current_user.is_authenticated()
     
-    def _list_href(view, context, model, name):
+    def _link_logo(view, context, model, name):
         if not model.logo_submited:
             return ''
 
         return Markup('<a href="'+model.logo_submited+'" target="_blank">URL</a>')
+    
+    def _link_url(view, context, model, name):
+        if not model.url:
+            return ''
+
+        return Markup('<a href="http://'+model.url+'" target="_blank">'+model.url+'</a>')
+    
+    def _link_twitter(view, context, model, name):
+        if not model.url:
+            return ''
+
+        return Markup('<a href="https://twitter.com/'+model.twitter+'" target="_blank">'+model.twitter+'</a>')
 
     column_formatters = {
-        'logo_submited': _list_href
+        'logo_submited': _link_logo,
+        'url': _link_url,
+        'twitter': _link_twitter
     }
 
 
@@ -168,7 +182,7 @@ def index():
 init_login()
 
 # Create admin
-admin = admin.Admin(app, 'Auth', index_view=MyAdminIndexView(), base_template='my_master.html')
+admin = admin.Admin(app, 'Auth', index_view=MyAdminIndexView(), base_template='layout.html')
 
 # Add view
 admin.add_view(CompanyView(Company, db.session))
