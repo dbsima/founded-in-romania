@@ -9,6 +9,9 @@ from flask.ext.admin import helpers, expose
 from werkzeug.security import generate_password_hash, check_password_hash
 from jinja2 import Markup
 import requests, json
+
+from sqlalchemy import func
+
 # Create Flask application
 app = Flask(__name__)
 
@@ -18,7 +21,7 @@ app.config['SECRET_KEY'] = '123456790'
 # Create in-memory database
 app.config['DATABASE_FILE'] = 'sample_fir_db.sqlite'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + app.config['DATABASE_FILE']
-app.config['SQLALCHEMY_ECHO'] = True
+#app.config['SQLALCHEMY_ECHO'] = True
 db = SQLAlchemy(app)
 
 
@@ -93,7 +96,7 @@ class CompanyView(sqla.ModelView):
         if not model.url:
             return ''
 
-        return Markup('<a href="http://'+model.url+'" target="_blank">'+model.url+'</a>')
+        return Markup('<a href="'+model.url+'" target="_blank">'+model.url+'</a>')
     
     def _link_twitter(view, context, model, name):
         if not model.url:
@@ -182,15 +185,15 @@ def has_key(d, key):
 
 @app.route("/data", methods=['GET'])
 def get_users():
+    
+    no_of_companies = db.session.query(func.count('*')).select_from(Company).scalar() 
+    
     payload = {'key': '1912f415723a26ff57f90be983cd38facfc9ca85',
                'completed': 'true',
-              'offset' : '1'}
+              'offset' : no_of_companies + 1}
     r = requests.get('https://api.typeform.com/v0/form/HHO2Uc', params=payload)
     json_data = json.loads(r.text)
     questions = json_data['questions']
-    
-    for question in questions:
-        print question
         
     responses = json_data['responses']
     
@@ -200,6 +203,7 @@ def get_users():
         date_land = response['metadata']['date_land']
         date_submit = datetime.datetime.strptime(date_land, "%Y-%m-%d %H:%M:%S")
         
+        # get company details
         name = has_key(response['answers'], 'textfield_1466918')
         url = has_key(response['answers'], 'website_1466924')
         logo_submited = has_key(response['answers'], 'website_1466929')
@@ -207,7 +211,8 @@ def get_users():
         twitter = has_key(response['answers'], 'textfield_1668035')
         contact_name = has_key(response['answers'], 'textfield_1466921')
         contact_email = has_key(response['answers'], 'email_1466925')
-    
+        
+        # create a new Company entry in the database
         company = Company(name=name,
                            url=url,
                            logo_submited=logo_submited,
@@ -218,6 +223,7 @@ def get_users():
                            founded_year = year,
                            date_submit = date_submit,
                            status="pending")
+        # Add company to database
         db.session.add(company)
 
     db.session.commit()
@@ -237,19 +243,17 @@ admin = admin.Admin(app, 'Auth', index_view=MyAdminIndexView(), base_template='l
 admin.add_view(CompanyView(Company, db.session))
 
 
-def build_sample_db():
+def build_db():
     """
     Populate a small db with some example entries.
     """
 
     import string
-    import random
-    import datetime
 
     db.drop_all()
     db.create_all()
-    # passwords are hashed, to use plaintext passwords instead:
-    # test_user = User(login="test", password="test")
+    
+    # Passwords are hashed
     test_user = User(login="test", password=generate_password_hash("test"))
     db.session.add(test_user)
 
@@ -262,7 +266,7 @@ if __name__ == '__main__':
     app_dir = os.path.realpath(os.path.dirname(__file__))
     database_path = os.path.join(app_dir, app.config['DATABASE_FILE'])
     if not os.path.exists(database_path):
-        build_sample_db()
+        build_db()
 
     # Start app
     app.run(debug=True, port=5001)
