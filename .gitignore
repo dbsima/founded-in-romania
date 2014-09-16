@@ -4,6 +4,7 @@ bin
 lib
 include
 env
+venv
 
 # Mac OS X custom attribute files
 .DS_Store

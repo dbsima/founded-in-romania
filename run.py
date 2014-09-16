@@ -8,6 +8,7 @@ from flask.ext.admin.contrib import sqla
 from flask.ext.admin import helpers, expose
 from werkzeug.security import generate_password_hash, check_password_hash
 from jinja2 import Markup
+import requests, json
 # Create Flask application
 app = Flask(__name__)
 
@@ -140,9 +141,6 @@ def init_login():
         return db.session.query(User).get(user_id)
 
 
-
-
-
 # Create customized index view class that handles login & registration
 class MyAdminIndexView(admin.AdminIndexView):
 
@@ -176,6 +174,55 @@ class MyAdminIndexView(admin.AdminIndexView):
 @app.route('/')
 def index():
     return render_template('index.html')
+
+def has_key(d, key):
+    if key not in d:
+        return ''
+    return d[key]
+
+@app.route("/data", methods=['GET'])
+def get_users():
+    payload = {'key': '1912f415723a26ff57f90be983cd38facfc9ca85',
+               'completed': 'true',
+              'offset' : '1'}
+    r = requests.get('https://api.typeform.com/v0/form/HHO2Uc', params=payload)
+    json_data = json.loads(r.text)
+    questions = json_data['questions']
+    
+    for question in questions:
+        print question
+        
+    responses = json_data['responses']
+    
+    import datetime
+    
+    for response in responses:
+        print response['metadata']['date_land']
+        name = has_key(response['answers'], 'textfield_1466918')
+        url = has_key(response['answers'], 'website_1466924')
+        logo_submited = has_key(response['answers'], 'website_1466929')
+        year = has_key(response['answers'], 'number_1668017')
+        twitter = has_key(response['answers'], 'textfield_1668035')
+        contact_name = has_key(response['answers'], 'textfield_1466921')
+        contact_email = has_key(response['answers'], 'email_1466925')
+    
+        company = Company(name=name,
+                           url=url,
+                           logo_submited=logo_submited,
+                           logo_accepted="",
+                           contact_email=contact_email,
+                           contact_name = contact_name,
+                           twitter = twitter,
+                           founded_year = year,
+                           date_submit = datetime.datetime.now(),
+                           status="pending")
+        db.session.add(company)
+
+    db.session.commit()
+        
+    json_data = json.dumps(r.text, indent=4, separators=(',', ':'))
+    #print responses
+    return json_data
 
 
 # Initialize flask-login
@@ -230,4 +277,4 @@ if __name__ == '__main__':
         build_sample_db()
 
     # Start app
-    app.run(debug=True)
+    app.run(debug=True, port=5001)
