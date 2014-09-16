@@ -184,9 +184,10 @@ def has_key(d, key):
     return d[key]
 
 @app.route("/data", methods=['GET'])
-def get_users():
+def get_companies():
     
     no_of_companies = db.session.query(func.count('*')).select_from(Company).scalar() 
+    print no_of_companies
     
     payload = {'key': '1912f415723a26ff57f90be983cd38facfc9ca85',
                'completed': 'true',
@@ -227,10 +228,8 @@ def get_users():
         db.session.add(company)
 
     db.session.commit()
-        
-    json_data = json.dumps(r.text, indent=4, separators=(',', ':'))
-    #print responses
-    return json_data
+    
+    return render_template('index.html')
 
 
 # Initialize flask-login
