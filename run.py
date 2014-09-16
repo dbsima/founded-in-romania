@@ -197,7 +197,9 @@ def get_users():
     import datetime
     
     for response in responses:
-        print response['metadata']['date_land']
+        date_land = response['metadata']['date_land']
+        date_submit = datetime.datetime.strptime(date_land, "%Y-%m-%d %H:%M:%S")
+        
         name = has_key(response['answers'], 'textfield_1466918')
         url = has_key(response['answers'], 'website_1466924')
         logo_submited = has_key(response['answers'], 'website_1466929')
@@ -214,7 +216,7 @@ def get_users():
                            contact_name = contact_name,
                            twitter = twitter,
                            founded_year = year,
-                           date_submit = datetime.datetime.now(),
+                           date_submit = date_submit,
                            status="pending")
         db.session.add(company)
 
@@ -250,20 +252,6 @@ def build_sample_db():
     # test_user = User(login="test", password="test")
     test_user = User(login="test", password=generate_password_hash("test"))
     db.session.add(test_user)
-    
-    tmp = int(1000*random.random())
-    
-    test_company = Company(name="Google",
-                           url="www.google.com",
-                           logo_submited="https://www.dropbox.com/s/0yg92hm0lhjsned/1743570_680591551991656_1712274378_n.jpg?dl=0",
-                           logo_accepted="",
-                           contact_email="test@google.com",
-                           contact_name = "Sergey",
-                           twitter = "@larry",
-                           founded_year = 1998,
-                           date_submit = datetime.datetime.now(),
-                           status="pending")
-    db.session.add(test_company)
 
     db.session.commit()
     return
