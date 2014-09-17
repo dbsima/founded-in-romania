@@ -4,11 +4,7 @@
 ```shell
 sudo apt-get install python-pip
 ```
-### Install the virtualenv Python package
-```shell
-sudo apt-get install python-virtualenv
-```
-### Install virtualenv itself
+### Install virtualenv Python package
 ```shell
 sudo pip install virtualenv
 ```

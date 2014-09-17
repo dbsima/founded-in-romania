@@ -1,0 +1,133 @@
+import os
+from flask import Flask, url_for, redirect, render_template, request
+from flask.ext.sqlalchemy import SQLAlchemy
+from sqlalchemy.dialects.postgresql import JSON
+from wtforms import form, fields, validators
+from flask.ext import admin, login
+
+from werkzeug.security import check_password_hash
+import requests, json
+
+from app.companies.views import CompanyView
+from app.users.views import AdminIndexView
+
+from app.companies.models import Company
+
+from sqlalchemy import func
+
+from app.shared.models import db
+from app.users.models import User
+
+# Create Flask application
+app = Flask(__name__)
+
+# Create dummy secrey key so we can use sessions
+app.config['SECRET_KEY'] = '123456790'
+
+# Create in-memory database
+app.config['DATABASE_FILE'] = 'sample_fir_db.sqlite'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + app.config['DATABASE_FILE']
+#app.config['SQLALCHEMY_ECHO'] = True
+
+db.app = app
+db.init_app(app)
+
+# Define login and registration forms (for flask-login)
+class LoginForm(form.Form):
+    login = fields.TextField(validators=[validators.required()])
+    password = fields.PasswordField(validators=[validators.required()])
+
+    def validate_login(self, field):
+        user = self.get_user()
+
+        if user is None:
+            raise validators.ValidationError('Invalid user')
+
+        # we're comparing the plaintext pw with the the hash from the db
+        if not check_password_hash(user.password, self.password.data):
+        # to compare plain text passwords use
+        # if user.password != self.password.data:
+            raise validators.ValidationError('Invalid password')
+
+    def get_user(self):
+        return db.session.query(User).filter_by(login=self.login.data).first()
+
+
+# Initialize flask-login
+def init_login():
+    login_manager = login.LoginManager()
+    login_manager.init_app(app)
+
+    # Create user loader function
+    @login_manager.user_loader
+    def load_user(user_id):
+        return db.session.query(User).get(user_id)
+
+
+# Flask views
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+def has_key(d, key):
+    if key not in d:
+        return ''
+    return d[key]
+
+@app.route("/data", methods=['GET'])
+def get_companies():
+    
+    no_of_companies = db.session.query(func.count('*')).select_from(Company).scalar() 
+    print no_of_companies
+    
+    payload = {'key': '1912f415723a26ff57f90be983cd38facfc9ca85',
+               'completed': 'true',
+              'offset' : no_of_companies + 1}
+    r = requests.get('https://api.typeform.com/v0/form/HHO2Uc', params=payload)
+    json_data = json.loads(r.text)
+    questions = json_data['questions']
+        
+    responses = json_data['responses']
+    
+    import datetime
+    
+    for response in responses:
+        date_land = response['metadata']['date_land']
+        date_submit = datetime.datetime.strptime(date_land, "%Y-%m-%d %H:%M:%S")
+        
+        # get company details
+        name = has_key(response['answers'], 'textfield_1466918')
+        url = has_key(response['answers'], 'website_1466924')
+        logo_submited = has_key(response['answers'], 'website_1466929')
+        year = has_key(response['answers'], 'number_1668017')
+        twitter = has_key(response['answers'], 'textfield_1668035')
+        contact_name = has_key(response['answers'], 'textfield_1466921')
+        contact_email = has_key(response['answers'], 'email_1466925')
+        
+        # create a new Company entry in the database
+        company = Company(name=name,
+                           url=url,
+                           logo_submited=logo_submited,
+                           logo_accepted="",
+                           contact_email=contact_email,
+                           contact_name = contact_name,
+                           twitter = twitter,
+                           founded_year = year,
+                           date_submit = date_submit,
+                           status="pending")
+        # Add company to database
+        db.session.add(company)
+
+    db.session.commit()
+    
+    return json.dumps(responses)
+
+
+# Initialize flask-login
+init_login()
+
+# Create admin
+admin = admin.Admin(app, 'Auth', index_view=AdminIndexView(), base_template='layout.html')
+
+# Add view
+admin.add_view(CompanyView(Company, db.session))
