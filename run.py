@@ -229,7 +229,7 @@ def get_companies():
 
     db.session.commit()
     
-    return render_template('index.html')
+    return json.dumps(responses)
 
 
 # Initialize flask-login
