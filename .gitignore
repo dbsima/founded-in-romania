@@ -5,6 +5,7 @@ lib
 include
 env
 venv
+*.pyc
 
 # Mac OS X custom attribute files
 .DS_Store
