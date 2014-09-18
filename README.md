@@ -26,4 +26,4 @@ pip install -r requirements.txt
 ```shell
 python run.py
 ```
-Go to http://localhost:5000/ and to http://localhost:5000/data to populate the db
+Go to http://localhost:8080/ and to http://localhost:8080/data to populate the db
