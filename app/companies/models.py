@@ -16,7 +16,6 @@ class Company(db.Model):
     contact_name = db.Column(db.String(120))
     # administrative stuff
     date_submit = db.Column(db.DateTime)
-    date_accept = db.Column(db.DateTime)
     status = db.Column(db.String(64))
 
     # Required for administrative interface
