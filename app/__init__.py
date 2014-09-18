@@ -2,10 +2,8 @@ import os
 from flask import Flask, url_for, redirect, render_template, request
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy.dialects.postgresql import JSON
-from wtforms import form, fields, validators
 from flask.ext import admin, login
 
-from werkzeug.security import check_password_hash
 import requests, json
 
 from app.companies.views import CompanyView
@@ -31,26 +29,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + app.config['DATABASE_FILE
 
 db.app = app
 db.init_app(app)
-
-# Define login and registration forms (for flask-login)
-class LoginForm(form.Form):
-    login = fields.TextField(validators=[validators.required()])
-    password = fields.PasswordField(validators=[validators.required()])
-
-    def validate_login(self, field):
-        user = self.get_user()
-
-        if user is None:
-            raise validators.ValidationError('Invalid user')
-
-        # we're comparing the plaintext pw with the the hash from the db
-        if not check_password_hash(user.password, self.password.data):
-        # to compare plain text passwords use
-        # if user.password != self.password.data:
-            raise validators.ValidationError('Invalid password')
-
-    def get_user(self):
-        return db.session.query(User).filter_by(login=self.login.data).first()
 
 
 # Initialize flask-login
