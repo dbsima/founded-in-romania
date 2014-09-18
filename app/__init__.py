@@ -101,6 +101,7 @@ def get_companies():
     return json.dumps(responses)
 
 
+
 # Initialize flask-login
 init_login()
 
