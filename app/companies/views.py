@@ -18,8 +18,6 @@ class CompanyView(sqla.ModelView):
     
     #form_excluded_columns = ['url', ]
     
-   
-    
     def is_accessible(self):
         return login.current_user.is_authenticated()
     

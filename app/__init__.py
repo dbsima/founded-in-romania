@@ -27,6 +27,10 @@ app.config['DATABASE_FILE'] = 'sample_fir_db.sqlite'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + app.config['DATABASE_FILE']
 #app.config['SQLALCHEMY_ECHO'] = True
 
+app_dir = os.path.realpath(os.path.dirname(__file__))
+print app_dir
+app.config['STATIC_FOLDER'] = 'static'
+
 db.app = app
 db.init_app(app)
 
@@ -46,6 +50,10 @@ def init_login():
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 def has_key(d, key):
     if key not in d:
