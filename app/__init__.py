@@ -94,7 +94,7 @@ def get_companies():
         company = Company(name=name,
                            url=url,
                            logo_submited=logo_submited,
-                           logo_accepted="",
+                           logo="",
                            contact_email=contact_email,
                            contact_name = contact_name,
                            twitter = twitter,

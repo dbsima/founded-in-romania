@@ -10,7 +10,7 @@ class Company(db.Model):
     founded_year = db.Column(db.Integer)
     # logo
     logo_submited = db.Column(db.String(180))
-    logo_accepted = db.Column(db.String(180))
+    logo = db.Column(db.String(180))
     # contact
     contact_email = db.Column(db.String(120))
     contact_name = db.Column(db.String(120))
