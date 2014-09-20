@@ -14,11 +14,16 @@
 {% block container_inner%}
 
 <ul class="cbp-rfgrid">
-    <li><a href="http://bit.ly/3dhubs-fih" target="_blank"><img src="{{ url_for('static', filename='images/logos/3dhubs.png') }}" /><div><h3>3D Hubs</h3></div></a></li>
-    <li><a href="http://bit.ly/22tracks-fih" target="_blank"><img src="{{ url_for('static', filename='images/logos/22tracks.png') }}" /><div><h3>22tracks</h3></div></a></li>
-    <li><a href="http://bit.ly/aceandtate-fih" target="_blank"><img src="{{ url_for('static', filename='images/logos/aceandtate.png') }}" /><div><h3>Ace &amp; Tate</h3></div></a></li>
-    <li><a href="http://bit.ly/adyen-fih" target="_blank"><img src="{{ url_for('static', filename='images/logos/adyen.png') }}" /><div><h3>Adyen</h3></div></a></li>
-    <li><a href="http://bit.ly/aliveshoes-fih" target="_blank"><img src="{{ url_for('static', filename='images/logos/aliveshoes.png') }}" /><div><h3>ALIVESHOES</h3></div></a></li>
+    {% for company in companies %}
+    <li>
+        <a href="{{ company.url }}" target="_blank">
+            <img src="static/images/logos/{{ company.logo }}" />
+            <div>
+                <h3>{{ company.name }}</h3>
+            </div>
+        </a>
+    </li>
+    {% endfor %}
 </ul>
 {% endblock %}
 

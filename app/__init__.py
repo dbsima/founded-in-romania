@@ -49,7 +49,13 @@ def init_login():
 # Flask views
 @app.route('/')
 def index():
-    return render_template('index.html')
+    companies = Company.query.\
+                    with_entities(Company.name, Company.url, Company.logo).\
+                    filter_by(status='accepted').\
+                    order_by(Company.name).all()
+    entries = [dict(name=row[0], url=row[1], logo=row[2]) for row in companies]
+    print entries
+    return render_template('index.html', companies=entries)
 
 @app.route('/about')
 def about():
