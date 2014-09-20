@@ -10,11 +10,10 @@ from flask.ext.admin.form import rules
 from flask.ext.admin.contrib import sqla
 
 from app.companies.models import Company
+from wtforms.fields import SelectField
 
 app_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), os.pardir))
-print app_dir
 logo_path = os.path.join(app_dir, 'static/images/logos')
-print logo_path
 
 class CompanyView(sqla.ModelView):
     # Override displayed fields
@@ -35,7 +34,8 @@ class CompanyView(sqla.ModelView):
     
     # Override form field to use Flask-Admin FileUploadField
     form_overrides = {
-        'logo': form.FileUploadField
+        'logo': form.FileUploadField,
+        'status': SelectField
     }
     
     # Pass additional parameters to 'path' to FileUploadField constructor
@@ -43,7 +43,9 @@ class CompanyView(sqla.ModelView):
         'logo': {
             'label': 'File',
             'base_path': logo_path
-        }
+        },
+        'status': dict(
+            choices=[('pending', 'pending'), ('accepted', 'accepted'), ('hidden', 'hidden')])
     }
     
     def is_accessible(self):
