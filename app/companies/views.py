@@ -79,16 +79,6 @@ class CompanyView(sqla.ModelView):
 
         return Markup('<a href="mailto:'+model.contact_email+'" target="_blank">'+model.contact_name+'</a>')
     
-    def hyperlink(href, text, uri_scheme):
-        if not href or not text:
-            return ''
-        if not href:
-            href = '#href'
-        if not text:
-            text = 'text'
-            
-        return Markup('<a href="' + uri_scheme+href+'" target="_blank">'+text+'</a>')
-    
     column_formatters = {
         'logo_submited': _link_logo_submitted,
         'logo': _link_logo,
