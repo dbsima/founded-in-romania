@@ -1,10 +1,11 @@
 from app.shared.models import db
+from flask.ext.admin.actions import action
 
 # Create user model.
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     login = db.Column(db.String(80), unique=True)
-    password = db.Column(db.String(64))
+    password = db.Column(db.String(128))
 
     # Flask-Login integration
     def is_authenticated(self):

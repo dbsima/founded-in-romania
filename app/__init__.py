@@ -23,13 +23,13 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = '123456790'
 
 # Create in-memory database
-app.config['DATABASE_FILE'] = 'sample_fir_db.sqlite'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + app.config['DATABASE_FILE']
+#app.config['DATABASE_FILE'] = 'sample_fir_db.sqlite'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + app.config['DATABASE_FILE']
 #app.config['SQLALCHEMY_ECHO'] = True
 
 app_dir = os.path.realpath(os.path.dirname(__file__))
-print app_dir
 app.config['STATIC_FOLDER'] = 'static'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://dbsima:lililulu123@localhost/fir'
 
 db.app = app
 db.init_app(app)
@@ -49,13 +49,13 @@ def init_login():
 # Flask views
 @app.route('/')
 def index():
-    companies = Company.query.\
+    entries = Company.query.\
                     with_entities(Company.name, Company.url, Company.logo).\
                     filter_by(status='accepted').\
                     order_by(Company.name).all()
-    entries = [dict(name=row[0], url=row[1], logo=row[2]) for row in companies]
+    companies = [dict(name=row[0], url=row[1], logo=row[2]) for row in entries]
     print entries
-    return render_template('index.html', companies=entries)
+    return render_template('index.html', companies=companies)
 
 @app.route('/about')
 def about():
@@ -63,7 +63,7 @@ def about():
 
 def has_key(d, key):
     if key not in d:
-        return ''
+        return None
     return d[key]
 
 @app.route("/data", methods=['GET'])
@@ -89,9 +89,14 @@ def get_companies():
         
         # get company details
         name = has_key(response['answers'], 'textfield_1466918')
+        
+        bitly_url = ''
+        founders = ''
+        description = ''
+        
         url = has_key(response['answers'], 'website_1466924')
         logo_submited = has_key(response['answers'], 'website_1466929')
-        year = has_key(response['answers'], 'number_1668017')
+        founded_year = has_key(response['answers'], 'number_1668017')
         twitter = has_key(response['answers'], 'textfield_1668035')
         contact_name = has_key(response['answers'], 'textfield_1466921')
         contact_email = has_key(response['answers'], 'email_1466925')
@@ -104,7 +109,7 @@ def get_companies():
                            contact_email=contact_email,
                            contact_name = contact_name,
                            twitter = twitter,
-                           founded_year = year,
+                           founded_year = founded_year,
                            date_submit = date_submit,
                            status="pending")
         # Add company to database

@@ -22,15 +22,22 @@ def build_db():
 
 
 if __name__ == '__main__':
+    
+    db.drop_all()    
+    db.create_all()
+    test_user = User(login="test", password=generate_password_hash("test"))
+    db.session.add(test_user)
+
+    db.session.commit()
 
     # Build a sample db on the fly, if one does not exist yet.
-    app_dir = os.path.realpath(os.path.dirname(__file__))
-    database_path = os.path.join(app_dir, "app/" + app.config['DATABASE_FILE'])
+    #app_dir = os.path.realpath(os.path.dirname(__file__))
+    #database_path = os.path.join(app_dir, "app/" + app.config['DATABASE_FILE'])
     
-    print database_path 
+    #print database_path 
     
-    if not os.path.exists(database_path):
-        build_db()
+    #if not os.path.exists(database_path):
+    #    build_db()
         
     # Start app
     try:
