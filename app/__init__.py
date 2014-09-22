@@ -29,7 +29,7 @@ app.config['SECRET_KEY'] = '123456790'
 
 app_dir = os.path.realpath(os.path.dirname(__file__))
 app.config['STATIC_FOLDER'] = 'static'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://dbsima:lililulu123@localhost/fir'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://www-data:eish1eiF@localhost/fir_db'
 
 db.app = app
 db.init_app(app)
