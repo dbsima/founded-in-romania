@@ -83,6 +83,8 @@ def get_companies():
     
     import datetime
     
+    print len(responses)
+    
     for response in responses:
         date_land = response['metadata']['date_land']
         date_submit = datetime.datetime.strptime(date_land, "%Y-%m-%d %H:%M:%S")
