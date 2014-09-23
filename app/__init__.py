@@ -11,6 +11,8 @@ from flask.ext.sqlalchemy import SQLAlchemy
 
 from flask_debugtoolbar import DebugToolbarExtension
 
+from werkzeug.contrib.fixers import ProxyFix
+
 from sqlalchemy import func
 from sqlalchemy.dialects.postgresql import JSON
 
@@ -27,6 +29,9 @@ app.config.from_object('config')
 app.config.from_pyfile('config.py')
 
 toolbar = DebugToolbarExtension(app)
+app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
+
+app.wsgi_app = ProxyFix(app.wsgi_app)
 
 db.app = app
 db.init_app(app)
