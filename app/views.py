@@ -1,19 +1,61 @@
+'''
+This is where the routes are defined. It may be split into a package of its own
+(app/views/) with related views grouped together into modules.
+'''
+
 import os
 
-from flask import url_for
-from flask.ext import login
 from jinja2 import Markup
 
-from flask.ext.admin import form
+from .models import User, Company
+from wtforms.fields import SelectField
+
+from flask import  redirect, url_for, request
+from flask.ext import login, admin
+from flask.ext.admin import helpers, expose, form
+from flask.ext.admin.contrib import sqla
 from flask.ext.admin.form import rules
 
-from flask.ext.admin.contrib import sqla
+from .forms import LoginForm
 
-from app.companies.models import Company
-from wtforms.fields import SelectField
+# Create customized model view class for User
+class UserView(sqla.ModelView):
+    # 
+    def is_accessible(self):
+        return login.current_user.is_authenticated()
+
+
+# Create customized index view class that handles login & registration
+class AdminIndexView(admin.AdminIndexView):
+
+    @expose('/')
+    def index(self):
+        if not login.current_user.is_authenticated():
+            return redirect(url_for('.login_view'))
+        return super(AdminIndexView, self).index()
+
+    @expose('/login/', methods=('GET', 'POST'))
+    def login_view(self):
+        # handle user login
+        form = LoginForm(request.form)
+        if helpers.validate_form_on_submit(form):
+            user = form.get_user()
+            login.login_user(user)
+
+        if login.current_user.is_authenticated():
+            return redirect(url_for('.index'))
+        self._template_args['form'] = form
+        #self._template_args['link'] = link
+        return super(AdminIndexView, self).index()
+
+    @expose('/logout/')
+    def logout_view(self):
+        login.logout_user()
+        return redirect(url_for('.index'))
 
 app_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), os.pardir))
 logo_path = os.path.join(app_dir, 'static/images/logos')
+
 
 class CompanyView(sqla.ModelView):
     # Override displayed fields
@@ -32,7 +74,7 @@ class CompanyView(sqla.ModelView):
     
     #form_excluded_columns = ['url', ]
     
-    # Override form field to use Flask-Admin FileUploadField
+    # Override form field to use Flask-Admin SelectField
     form_overrides = {
         'logo': form.FileUploadField,
         'status': SelectField

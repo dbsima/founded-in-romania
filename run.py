@@ -1,7 +1,14 @@
+'''
+This is the file that is invoked to start up a development server. It gets a
+copy of the app from your package and runs it. This won't be used in production,
+but it will see a lot of mileage in development.
+'''
+
+import os
 from app import app, db
 from werkzeug.security import generate_password_hash
-from app.users.models import User
-import os
+from app.models import User
+
 
 def build_db():
     """
@@ -41,6 +48,6 @@ if __name__ == '__main__':
         
     # Start app
     try:
-        app.run(debug=True, port=8080)
+        app.run()
     except Exception:
         app.logger.exception('Failed')

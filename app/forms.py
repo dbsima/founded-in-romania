@@ -1,8 +1,7 @@
-from app.shared.models import db
 from wtforms import form, fields, validators
 from werkzeug.security import check_password_hash
 
-from app.users.models import User
+from .models import db, User
 
 
 # Define login and registration forms (for flask-login)

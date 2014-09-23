@@ -4,30 +4,20 @@
 ```shell
 sudo apt-get install postgresql postgresql-contrib pgadmin3
 ```
-
 ### Create a database user with full rights on it
 ```shell
-sudo -u postgres createuser -D -A -P www-data
-sudo -u postgres createdb -O myuser fir
+sudo -u postgres createuser -D -A -P myuser
+sudo -u postgres createdb -O myuser mydb
 ```
-
-### Create a database user with full rights on it
-```shell
-sudo -u postgres createuser -D -A -P www-data
-sudo -u postgres createdb -O www-data database_name
-```
-
 ### Restart the PostgreSQL server
-```shell
-sudo -u postgres createuser -D -A -P www-data
-sudo -u postgres createdb -O myuser fir
-```
-
-### Install the Python packages manager
 ```shell
 sudo /etc/init.d/postgresql restart
 ```
 
+### Install the Python packages manager
+```shell
+sudo apt-get install python-pip
+```
 ### Install virtualenv Python package
 ```shell
 sudo pip install virtualenv

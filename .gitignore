@@ -6,8 +6,7 @@ include
 env
 venv
 *.pyc
-
-app/sample_fir_db.sqlite
+instance/
 
 # Mac OS X custom attribute files
 .DS_Store

@@ -1,35 +1,32 @@
-import os
+'''
+This file initializes your application and brings together all of the various
+components.
+'''
+
+import os, requests, json
+
 from flask import Flask, url_for, redirect, render_template, request
-from flask.ext.sqlalchemy import SQLAlchemy
-from sqlalchemy.dialects.postgresql import JSON
 from flask.ext import admin, login
+from flask.ext.sqlalchemy import SQLAlchemy
 
-import requests, json
-
-from app.companies.views import CompanyView
-from app.users.views import AdminIndexView
-
-from app.companies.models import Company
+from flask_debugtoolbar import DebugToolbarExtension
 
 from sqlalchemy import func
+from sqlalchemy.dialects.postgresql import JSON
 
-from app.shared.models import db
-from app.users.models import User
+from .models import db, User, Company
+from .views import AdminIndexView, CompanyView
 
-# Create Flask application
-app = Flask(__name__)
+"""
+If we set instance_relative_config=True when we create our app with the Flask()
+call, app.config.from_pyfile() will load the specified file from the
+instance/config.py
+"""
+app = Flask(__name__, instance_relative_config=True)
+app.config.from_object('config')
+app.config.from_pyfile('config.py')
 
-# Create dummy secrey key so we can use sessions
-app.config['SECRET_KEY'] = '123456790'
-
-# Create in-memory database
-#app.config['DATABASE_FILE'] = 'sample_fir_db.sqlite'
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + app.config['DATABASE_FILE']
-#app.config['SQLALCHEMY_ECHO'] = True
-
-app_dir = os.path.realpath(os.path.dirname(__file__))
-app.config['STATIC_FOLDER'] = 'static'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://www-data:eish1eiF@localhost/fir_db'
+toolbar = DebugToolbarExtension(app)
 
 db.app = app
 db.init_app(app)
@@ -83,8 +80,6 @@ def get_companies():
     
     import datetime
     
-    print len(responses)
-    
     for response in responses:
         date_land = response['metadata']['date_land']
         date_submit = datetime.datetime.strptime(date_land, "%Y-%m-%d %H:%M:%S")
@@ -127,7 +122,7 @@ def get_companies():
 init_login()
 
 # Create admin
-admin = admin.Admin(app, 'Auth', index_view=AdminIndexView(), base_template='layout.html')
+admin = admin.Admin(app, 'Admin', index_view=AdminIndexView(), base_template='layout.html')
 
 # Add view
-admin.add_view(CompanyView(Company, db.session))
+admin.add_view(CompanyView(Company, db.session, name='Companies', url='/companies'))
