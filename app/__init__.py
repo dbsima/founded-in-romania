@@ -12,6 +12,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask_debugtoolbar import DebugToolbarExtension
 
 from werkzeug.contrib.fixers import ProxyFix
+from werkzeug.routing import BaseConverter
 
 from sqlalchemy import func
 from sqlalchemy.dialects.postgresql import JSON
@@ -66,6 +67,20 @@ def about():
     return render_template('about.html')
 
 
+class RegexConverter(BaseConverter):
+  def __init__(self, url_map, *items):
+    super(RegexConverter, self).__init__(url_map)
+    if len(items)>0:
+      self.regex = items[0]
+
+app.url_map.converters['regex'] = RegexConverter
+
+@app.route("/<regex([a-z0-9]+):verification_str>")
+def site_verification(verification_str):
+    """Returns site verification content"""
+    return render_template("site_verification.html", verification_str=verification_str)
+
+
 def has_key(d, key):
     if key not in d:
         return None
@@ -81,10 +96,12 @@ def get_companies():
     since = last_date[0]
     print since
     
+    typeform_url = 'https://api.typeform.com/v0/form/HHO2Uc' + app.config['TYPEFORM_FORM_UID']
     payload = {'key': app.config['TYPEFORM_API_KEY'],
                'completed': 'true',
               'since' : since}
-    r = requests.get('https://api.typeform.com/v0/form/HHO2Uc', params=payload)
+    
+    r = requests.get(typeform_url, params=payload)
     json_data = json.loads(r.text)
     questions = json_data['questions']
         
