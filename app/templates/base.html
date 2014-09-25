@@ -3,28 +3,27 @@
 	<head>
         {% block head %}
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="The Netherlands has a thriving entrepreneurial scene and is one of Europe's hottest startup hubs. We list innovative startups with Dutch roots." />
 		<meta name="keywords" content="Holland, the Netherlands, Dutch, Europe, startups, entrepreneurs, innovation" />
-		
-        <meta property="og:title" content="Founded in Romania - The most innovative startups in Romania" />
-		<meta property="og:description" content="The Netherlands has a thriving entrepreneurial scene and is one of Europe's hottest startup hubs. We list innovative startups with Dutch roots." />
+        <meta property="og:title" content="Founded in Romania - The most innovative startups in the Romania" />
+		<meta property="og:description" content="Romania has a thriving entrepreneurial scene and is one of Europe's hottest startup hubs. We list innovative startups with Dutch roots." />
 		<meta property="og:site_name" content="Founded in Romania" />
-		<meta property="og:image" content="http://foundedinholland.com/images/avatar.png" />
+		<meta property="og:image" content="http://foundedinromania.com/images/avatar.png" />
         <meta property="og:fb:admins" content="740728879302445" />
-        
-        <meta name="twitter:site" content="@foundedholland" />
+
+        <meta name="twitter:site" content="@foundedinromania" />
         <meta name="twitter:title" content="Founded in Romania - The most innovative startups in the Romania" />
-		
-        <meta name="author" content="Cloudients" />
+
+        <meta name="author" content="Weekly" />
 		<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }} " />
-        <link rel="apple-touch-icon-precomposed" href="http://foundedinholland.com/images/avatar.png" />
+        <link rel="apple-touch-icon-precomposed" href="http://foundedinromania.com/images/avatar.png" />
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/default.css') }}" />
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/component.css') }}" />
         <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
 		<script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script>
-        
+
         <title>{% block title %}{% endblock %}</title>
         {% endblock %}
 	</head>
@@ -44,7 +43,7 @@
                 <a href="http://foundedinromania.com" class="no-link"><img src="{{ url_for('static', filename='images/logo-tulip.png') }}" alt="Founded in Romania"></a>
             </footer>
             {% endblock %}
-		</div>      
+		</div>
 
 	<!-- jQuery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -71,20 +70,20 @@
 		  });
 		});
     </script>
-    
+
 	<script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    
+
       ga('create', 'UA-52502471-2', 'auto');
       ga('send', 'pageview');
-    
+
     </script>
-	
+
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    
+
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -93,6 +92,6 @@
       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-            
+
 	</body>
 </html>
