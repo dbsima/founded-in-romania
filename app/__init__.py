@@ -81,6 +81,11 @@ def site_verification():
     """Returns site verification content"""
     return render_template("site_verification.html")
 
+# Robots file
+@app.route("/robots.txt")
+def robots_txt():
+    return app.send_static_file("robots.txt")
+
 
 def has_key(d, key):
     if key not in d:
