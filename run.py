@@ -5,49 +5,42 @@ but it will see a lot of mileage in development.
 '''
 
 import os
+import argparse
 from app import app, db
 from werkzeug.security import generate_password_hash
-from app.models import User
+from app.models import User, Pair
 
 
-def build_db():
+def database_setup():
     """
-    Populate a small db with some example entries.
+        
     """
-
-    import string
-
-    db.drop_all()
-    db.create_all()
-    
-    # Passwords are hashed
-    test_user = User(login="test", password=generate_password_hash("test"))
-    db.session.add(test_user)
-
-    db.session.commit()
-    return
-
-
-if __name__ == '__main__':
-    
+    # Create tables
     db.drop_all()    
     db.create_all()
-    test_user = User(login="test", password=generate_password_hash("test"))
-    db.session.add(test_user)
+    
+    # Add admin account
+    admin = User(login="test", password=generate_password_hash("test"))
+    db.session.add(admin)
+    
+    # Initialize 'since' variable
+    newest_date_submit = Pair(key="since", val=0)
+    db.session.add(newest_date_submit)
 
+    # Commit changes to the database
     db.session.commit()
+    print 'Database setup completed. Now run the app without --setup.'
 
-    # Build a sample db on the fly, if one does not exist yet.
-    #app_dir = os.path.realpath(os.path.dirname(__file__))
-    #database_path = os.path.join(app_dir, "app/" + app.config['DATABASE_FILE'])
     
-    #print database_path 
-    
-    #if not os.path.exists(database_path):
-    #    build_db()
-        
-    # Start app
-    try:
-        app.run()
-    except Exception:
-        app.logger.exception('Failed')
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Run New-Responsive-Image-Format app')
+    parser.add_argument('--setup', dest='run_setup', action='store_true')
+
+    args = parser.parse_args()
+    if args.run_setup:
+        database_setup()
+    else:
+        try:
+            app.run()
+        except Exception:
+            app.logger.exception('Failed')

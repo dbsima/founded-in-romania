@@ -15,8 +15,10 @@ from werkzeug.contrib.fixers import ProxyFix
 
 from sqlalchemy import func
 from sqlalchemy.dialects.postgresql import JSON
+from sqlalchemy.orm.exc import NoResultFound
+from sqlalchemy.orm.exc import MultipleResultsFound
 
-from .models import db, User, Company
+from .models import db, User, Company, Pair
 from .views import AdminIndexView, CompanyView
 
 """
@@ -24,9 +26,9 @@ If we set instance_relative_config=True when we create our app with the Flask()
 call, app.config.from_pyfile() will load the specified file from the
 instance/config.py
 """
-app = Flask(__name__, instance_relative_config=True)
+app = Flask(__name__)#, instance_relative_config=True)
 app.config.from_object('config')
-app.config.from_pyfile('config.py')
+#app.config.from_pyfile('config.py')
 
 toolbar = DebugToolbarExtension(app)
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
@@ -56,68 +58,82 @@ def index():
                     filter_by(status='accepted').\
                     order_by(Company.name).all()
     companies = [dict(name=row[0], url=row[1], logo=row[2]) for row in entries]
-    print entries
     return render_template('index.html', companies=companies)
+
 
 @app.route('/about')
 def about():
     return render_template('about.html')
+
 
 def has_key(d, key):
     if key not in d:
         return None
     return d[key]
 
+
 @app.route("/data", methods=['GET'])
 def get_companies():
     
     no_of_companies = db.session.query(func.count('*')).select_from(Company).scalar() 
-    print no_of_companies
     
-    payload = {'key': '1912f415723a26ff57f90be983cd38facfc9ca85',
+    last_date = Pair.query.with_entities(Pair.val).filter_by(key='since').one()
+    since = last_date[0]
+    print since
+    
+    payload = {'key': app.config['TYPEFORM_API_KEY'],
                'completed': 'true',
-              'offset' : no_of_companies + 1}
+              'since' : since}
     r = requests.get('https://api.typeform.com/v0/form/HHO2Uc', params=payload)
     json_data = json.loads(r.text)
     questions = json_data['questions']
         
     responses = json_data['responses']
     
-    import datetime
-    
-    for response in responses:
-        date_land = response['metadata']['date_land']
-        date_submit = datetime.datetime.strptime(date_land, "%Y-%m-%d %H:%M:%S")
-        
-        # get company details
-        name = has_key(response['answers'], 'textfield_1466918')
-        
-        bitly_url = ''
-        founders = ''
-        description = ''
-        
-        url = has_key(response['answers'], 'website_1466924')
-        logo_submited = has_key(response['answers'], 'website_1466929')
-        founded_year = has_key(response['answers'], 'number_1668017')
-        twitter = has_key(response['answers'], 'textfield_1668035')
-        contact_name = has_key(response['answers'], 'textfield_1466921')
-        contact_email = has_key(response['answers'], 'email_1466925')
-        
-        # create a new Company entry in the database
-        company = Company(name=name,
-                           url=url,
-                           logo_submited=logo_submited,
-                           logo="",
-                           contact_email=contact_email,
-                           contact_name = contact_name,
-                           twitter = twitter,
-                           founded_year = founded_year,
-                           date_submit = date_submit,
-                           status="pending")
-        # Add company to database
-        db.session.add(company)
+    if len(responses) > 0:
+        import datetime
+        from datetime import timedelta
+        import time
 
-    db.session.commit()
+        for response in responses:
+            date_land = response['metadata']['date_land']
+            date_submit = datetime.datetime.strptime(date_land, "%Y-%m-%d %H:%M:%S")
+
+            # get company details
+            name = has_key(response['answers'], 'textfield_1466918')
+            url = has_key(response['answers'], 'website_1466924')
+            logo_submited = has_key(response['answers'], 'website_1466929')
+            founded_year = has_key(response['answers'], 'number_1668017')
+            twitter = has_key(response['answers'], 'textfield_1668035')
+            contact_name = has_key(response['answers'], 'textfield_1466921')
+            contact_email = has_key(response['answers'], 'email_1466925')
+
+            bitly_url = ''
+            founders = ''
+            description = ''
+
+            status="pending"
+
+            # create a new Company entry in the database
+            company = Company(name=name,
+                               url=url,
+                               logo_submited=logo_submited,
+                               contact_email=contact_email,
+                               contact_name = contact_name,
+                               twitter = twitter,
+                               founded_year = founded_year,
+                               date_submit = date_submit,
+                               status=status)
+            # Add company to database
+            db.session.add(company)
+
+        unix_time = time.mktime((date_submit + timedelta(hours=2)).timetuple())
+        #print str(date_submit) + "-" + str(unix_time)
+        since = unix_time
+        
+        last_date = Pair.query.with_entities(Pair.val).filter_by(key='since').update({'val': since})
+        
+        db.session.commit()
     
     return json.dumps(responses)
 

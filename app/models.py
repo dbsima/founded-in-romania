@@ -60,3 +60,18 @@ class Company(db.Model):
             Required for administrative interface
         """
         return self.name
+
+    
+class Pair(db.Model):
+    """
+        Key-Value pairs database model
+    """
+    id = db.Column(db.Integer, primary_key=True)
+    key = db.Column(db.String(80), unique=True)
+    val = db.Column(db.Integer)
+
+    def __unicode__(self):
+        """
+            Required for administrative interface
+        """
+        return self.key

@@ -18,16 +18,20 @@ from flask.ext.admin.form import rules
 
 from .forms import LoginForm
 
-# Create customized model view class for User
+
 class UserView(sqla.ModelView):
-    # 
+    """
+        
+    """ 
     def is_accessible(self):
         return login.current_user.is_authenticated()
 
 
 # Create customized index view class that handles login & registration
 class AdminIndexView(admin.AdminIndexView):
-
+    """
+        
+    """
     @expose('/')
     def index(self):
         if not login.current_user.is_authenticated():
@@ -53,12 +57,15 @@ class AdminIndexView(admin.AdminIndexView):
         login.logout_user()
         return redirect(url_for('.index'))
 
+
 app_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), os.pardir))
 logo_path = os.path.join(app_dir, 'static/images/logos')
 
 
 class CompanyView(sqla.ModelView):
-    # Override displayed fields
+    """
+        
+    """
     column_list = ('name',
                    'founded_year',
                    'logo_submited',
@@ -69,8 +76,9 @@ class CompanyView(sqla.ModelView):
     
     column_labels = dict(founded_year='Year', contact_name='Contact')
     
-        
     column_searchable_list = ('name', 'contact_email', 'status')
+    
+    column_default_sort = ('date_submit', True)
     
     #form_excluded_columns = ['url', ]
     
