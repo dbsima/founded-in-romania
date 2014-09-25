@@ -79,7 +79,7 @@ app.url_map.converters['regex'] = RegexConverter
 @app.route("/google25e87b64455912d9.html")
 def site_verification():
     """Returns site verification content"""
-    return render_template("site_verification.html")
+    return app.send_static_file("site_verification.html")
 
 # Robots file
 @app.route("/robots.txt")
