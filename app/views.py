@@ -75,10 +75,9 @@ class CompanyView(sqla.ModelView):
                   'status')
     
     column_labels = dict(founded_year='Year', contact_name='Contact')
-    
     column_searchable_list = ('name', 'contact_email', 'status')
-    
     column_default_sort = ('date_submit', True)
+    column_filters = ('founded_year', 'status')
     
     #form_excluded_columns = ['url', ]
     
