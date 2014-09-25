@@ -7,7 +7,7 @@ import os
 
 from jinja2 import Markup
 
-from .models import User, Company
+from .models import db, User, Company
 from wtforms.fields import SelectField
 
 from flask import  redirect, url_for, request
@@ -18,6 +18,8 @@ from flask.ext.admin.form import rules
 
 from .forms import LoginForm
 
+from flask.ext.admin.base import BaseView, expose
+from flask.ext.admin.actions import action, ActionsMixin
 
 class UserView(sqla.ModelView):
     """
@@ -25,9 +27,10 @@ class UserView(sqla.ModelView):
     """ 
     def is_accessible(self):
         return login.current_user.is_authenticated()
+    
 
 
-# Create customized index view class that handles login & registration
+# Create customized index view class that handles login
 class AdminIndexView(admin.AdminIndexView):
     """
         
@@ -56,8 +59,8 @@ class AdminIndexView(admin.AdminIndexView):
     def logout_view(self):
         login.logout_user()
         return redirect(url_for('.index'))
-
-
+    
+    
 app_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), os.pardir))
 logo_path = os.path.join(app_dir, 'static/images/logos')
 
@@ -78,6 +81,8 @@ class CompanyView(sqla.ModelView):
     column_searchable_list = ('name', 'contact_email', 'status')
     column_default_sort = ('date_submit', True)
     column_filters = ('founded_year', 'status')
+    
+    page_size = 20
     
     #form_excluded_columns = ['url', ]
     
@@ -137,3 +142,32 @@ class CompanyView(sqla.ModelView):
         'twitter': _link_twitter,
         'contact_name': _link_mail
     }
+    
+    #action_disallowed_list = ['delete']
+    
+    def is_action_allowed(self, name):    
+        return super(CompanyView, self).is_action_allowed(name)
+    
+    @expose('/action/', methods=('POST',))
+    def action_view(self):
+        return self.handle_action()
+
+    # Actions
+    @action('status_pending', 'Change status to pending', 'Are you sure you want to make the status pending?')
+    def action_pending(self, items):
+        for item in items:
+            Company.query.filter_by(id=item).update({'status': 'pending'})
+        db.session.commit()
+            
+    @action('status_accepted', 'Change status to accepted', 'Are you sure you want to make the status accepted?')
+    def action_approved(self, items):
+        for item in items:
+            Company.query.filter_by(id=item).update({'status': 'accepted'})
+        db.session.commit()
+    
+    @action('status_hidden', 'Change status to hidden', 'Are you sure you want to make the status hidden?')
+    def action_hidden(self, items):
+        for item in items:
+            Company.query.filter_by(id=item).update({'status': 'hidden'})
+        db.session.commit()
+            

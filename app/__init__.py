@@ -59,6 +59,8 @@ def index():
                     filter_by(status='accepted').\
                     order_by(Company.name).all()
     companies = [dict(name=row[0], url=row[1], logo=row[2]) for row in entries]
+    
+    print entries
     return render_template('index.html', companies=companies)
 
 
@@ -151,6 +153,26 @@ def get_companies():
 
     return json.dumps(responses)
 
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template('404.html'), 404
+
+@app.errorhandler(401)
+def not_authorized(e):
+    return render_template('401.html'), 401
+
+@app.errorhandler(403)
+def forbidden(e):
+    return render_template('403.html'), 403
+
+@app.errorhandler(410)
+def gone(e):
+    return render_template('410.html'), 410
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    return render_template('500.html'), 500
 
 
 # Initialize flask-login
