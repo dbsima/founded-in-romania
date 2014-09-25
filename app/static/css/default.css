@@ -38,13 +38,13 @@ body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
 	font-weight:300;
     color: #ffffff;
-	background-color:#ef5624;
+	background-color:#ce1126;
 
 }
 
 a {
 	color: #fff;
-	background-color:#d64a1c;
+	background-color:#860d1a;
 	padding:0.188em;
 	text-decoration: none;
 	-webkit-border-radius: 0.188em;
@@ -155,7 +155,7 @@ a.no-link {
 }
 
 .container .join-box a.join-button:hover {
-	color:#ef5624;
+	color:#ce1126;
 	background-color:#fff;
 	text-decoration: none;
 }
