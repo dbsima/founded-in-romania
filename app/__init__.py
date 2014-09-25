@@ -75,10 +75,11 @@ class RegexConverter(BaseConverter):
 
 app.url_map.converters['regex'] = RegexConverter
 
-@app.route("/<regex([a-z0-9]+):verification_str>")
-def site_verification(verification_str):
+# Google WebMaster Tools verification page
+@app.route("/google25e87b64455912d9.html")
+def site_verification():
     """Returns site verification content"""
-    return render_template("site_verification.html", verification_str=verification_str)
+    return render_template("site_verification.html")
 
 
 def has_key(d, key):
@@ -89,24 +90,24 @@ def has_key(d, key):
 
 @app.route("/data", methods=['GET'])
 def get_companies():
-    
-    no_of_companies = db.session.query(func.count('*')).select_from(Company).scalar() 
-    
+
+    no_of_companies = db.session.query(func.count('*')).select_from(Company).scalar()
+
     last_date = Pair.query.with_entities(Pair.val).filter_by(key='since').one()
     since = last_date[0]
     print since
-    
+
     typeform_url = 'https://api.typeform.com/v0/form/HHO2Uc' + app.config['TYPEFORM_FORM_UID']
     payload = {'key': app.config['TYPEFORM_API_KEY'],
                'completed': 'true',
               'since' : since}
-    
+
     r = requests.get(typeform_url, params=payload)
     json_data = json.loads(r.text)
     questions = json_data['questions']
-        
+
     responses = json_data['responses']
-    
+
     if len(responses) > 0:
         import datetime
         from datetime import timedelta
@@ -147,11 +148,11 @@ def get_companies():
         unix_time = time.mktime((date_submit + timedelta(hours=2)).timetuple())
         #print str(date_submit) + "-" + str(unix_time)
         since = unix_time
-        
+
         last_date = Pair.query.with_entities(Pair.val).filter_by(key='since').update({'val': since})
-        
+
         db.session.commit()
-    
+
     return json.dumps(responses)
 
 
