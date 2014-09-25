@@ -67,19 +67,12 @@ def about():
     return render_template('about.html')
 
 
-class RegexConverter(BaseConverter):
-  def __init__(self, url_map, *items):
-    super(RegexConverter, self).__init__(url_map)
-    if len(items)>0:
-      self.regex = items[0]
-
-app.url_map.converters['regex'] = RegexConverter
-
 # Google WebMaster Tools verification page
 @app.route("/google25e87b64455912d9.html")
 def site_verification():
     """Returns site verification content"""
     return app.send_static_file("site_verification.html")
+
 
 # Robots file
 @app.route("/robots.txt")
@@ -102,7 +95,7 @@ def get_companies():
     since = last_date[0]
     print since
 
-    typeform_url = 'https://api.typeform.com/v0/form/HHO2Uc' + app.config['TYPEFORM_FORM_UID']
+    typeform_url = 'https://api.typeform.com/v0/form/' + app.config['TYPEFORM_FORM_UID']
     payload = {'key': app.config['TYPEFORM_API_KEY'],
                'completed': 'true',
               'since' : since}
@@ -150,10 +143,8 @@ def get_companies():
             # Add company to database
             db.session.add(company)
 
-        unix_time = time.mktime((date_submit + timedelta(hours=2)).timetuple())
-        #print str(date_submit) + "-" + str(unix_time)
-        since = unix_time
-
+        # know there is another last date
+        since = time.mktime((date_submit + timedelta(hours=2)).timetuple())
         last_date = Pair.query.with_entities(Pair.val).filter_by(key='since').update({'val': since})
 
         db.session.commit()
