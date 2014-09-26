@@ -20,7 +20,7 @@ def database_setup():
     db.create_all()
     
     # Add admin account
-    admin = User(login="test", password=generate_password_hash("test"))
+    admin = User(login="admin", password=generate_password_hash("p4r0l4#3st3#0k"))
     db.session.add(admin)
     
     # Initialize 'since' variable
