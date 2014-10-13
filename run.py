@@ -4,16 +4,16 @@ copy of the app from your package and runs it. This won't be used in production,
 but it will see a lot of mileage in development.
 '''
 
-import os
-import argparse
+import os, argparse
 from app import app, db
 from werkzeug.security import generate_password_hash
-from app.models import User, Pair
+from app.models import User, Pair, Company
 
+from app import TypeformAPI
 
 def database_setup():
     """
-        
+    Create db and populate it with what you get from the Typeform API    
     """
     # Create tables
     db.drop_all()    
@@ -29,6 +29,13 @@ def database_setup():
 
     # Commit changes to the database
     db.session.commit()
+    
+    tf = TypeformAPI()
+    tf.get_data()
+    tf.set_fields()
+    tf.update_db()
+    #print tf.fields
+    
     print 'Database setup completed. Now run the app without --setup.'
 
     

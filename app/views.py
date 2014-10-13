@@ -7,7 +7,6 @@ import os
 
 from jinja2 import Markup
 
-from .models import db, User, Company
 from wtforms.fields import SelectField
 
 from flask import  redirect, url_for, request
@@ -16,6 +15,7 @@ from flask.ext.admin import helpers, expose, form
 from flask.ext.admin.contrib import sqla
 from flask.ext.admin.form import rules
 
+from .models import db, User, Company
 from .forms import LoginForm
 
 from flask.ext.admin.base import BaseView, expose
@@ -30,10 +30,10 @@ class UserView(sqla.ModelView):
     
 
 
-# Create customized index view class that handles login
+# Create 
 class AdminIndexView(admin.AdminIndexView):
     """
-        
+    Customized index view class that handles login/logout    
     """
     @expose('/')
     def index(self):
@@ -62,7 +62,7 @@ class AdminIndexView(admin.AdminIndexView):
     
     
 app_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), os.pardir))
-logo_path = os.path.join(app_dir, 'static/images/logos')
+logo_path = os.path.join(app_dir, 'app/static/images/logos')
 
 
 class CompanyView(sqla.ModelView):
