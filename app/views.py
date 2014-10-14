@@ -92,11 +92,17 @@ class CompanyView(sqla.ModelView):
         'status': SelectField
     }
     
+    def prefix_name(obj, file_data):
+        import uuid
+        return str(uuid.uuid4())+".png"
+
+    
     # Pass additional parameters to 'path' to FileUploadField constructor
     form_args = {
         'logo': {
             'label': 'File',
-            'base_path': logo_path
+            'base_path': logo_path,
+            'namegen': prefix_name
         },
         'status': dict(
             choices=[('pending', 'pending'), ('accepted', 'accepted'), ('hidden', 'hidden')])

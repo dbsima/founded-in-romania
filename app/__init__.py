@@ -178,6 +178,7 @@ class TypeformAPI:
 def get_companies():
     tf = TypeformAPI()
     tf.get_data()
+    tf.set_fields()
     tf.update_db()
     return json.dumps(tf.responses)
 
