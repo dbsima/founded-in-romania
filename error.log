@@ -1431,3 +1431,770 @@ INFO:werkzeug:127.0.0.1 - - [16/Oct/2014 16:33:18] "GET /_debug_toolbar/static/j
 INFO:werkzeug:127.0.0.1 - - [16/Oct/2014 16:33:18] "GET /admin/static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 -
 INFO:werkzeug:127.0.0.1 - - [16/Oct/2014 16:33:18] "GET /_debug_toolbar/static/css/toolbar.css?0.09608698304018659 HTTP/1.1" 200 -
 INFO:werkzeug:127.0.0.1 - - [16/Oct/2014 16:33:18] "GET /_debug_toolbar/static/img/tick-red.png HTTP/1.1" 304 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:49:59] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:49:59] "GET /static/css/default.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:49:59] "GET /static/css/component.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:49:59] "GET /static/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:49:59] "GET /static/js/modernizr.custom.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:50:00] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:50:00] "GET /_debug_toolbar/static/js/jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:50:00] "GET /_debug_toolbar/static/js/jquery.tablesorter.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:50:00] "GET /_debug_toolbar/static/js/toolbar.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:50:00] "GET /static/images/logos/d3703864-ae26-40a9-aaf0-143723e608ee.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:50:00] "GET /static/images/logo-dracula.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:50:00] "GET /static/fonts/fontawesome-webfont.woff?v=4.1.0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:50:00] "GET /_debug_toolbar/static/css/toolbar.css?0.8903898808639497 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:50:00] "GET /_debug_toolbar/static/img/tick-red.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:50:01] "GET /static/images/favicon.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1413467157&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 1200
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:50:46] "GET /admin/companies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:50:46] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1413985394&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 547
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:50:55] "GET /admin/companies HTTP/1.1" 200 -
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1413985394&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 547
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:51:19] "GET /admin/companies HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:51:59] "GET /data HTTP/1.1" 404 -
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1413985394&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 547
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:52:06] "GET /admin/companies HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1413985394&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 547
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:52:34] "GET /admin/companies HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:52:34] "GET /admin/companies?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:52:34] "GET /admin/companies?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:52:34] "GET /admin/companies?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:52:34] "GET /admin/companies?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:52:34] "GET /admin/companies?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 14:52:34] "GET /admin/companies?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Running on http://127.0.0.1:5000/
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1413985394&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 547
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:06:42] "GET /admin/companies HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies HTTP/1.1" 301 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:22] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:23] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:23] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:23] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:23] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:23] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:23] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:23] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:23] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:23] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:23] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:23] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:23] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:23] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:23] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:28] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:58] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:07:59] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Running on http://127.0.0.1:5000/
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:08:50] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:09:14] "GET /admin/companies/ HTTP/1.1" 302 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:15] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /admin/static/bootstrap/css/bootstrap.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /admin/static/bootstrap/css/bootstrap-responsive.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /admin/static/admin/css/admin.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /admin/static/select2/select2.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /admin/static/vendor/jquery-1.8.3.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /admin/static/bootstrap/js/bootstrap.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /admin/static/select2/select2.min.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /admin/static/admin/js/form.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /admin/static/admin/js/filters.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /admin/static/admin/js/actions.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /_debug_toolbar/static/js/jquery.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /_debug_toolbar/static/js/jquery.tablesorter.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /_debug_toolbar/static/js/toolbar.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /admin/static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /_debug_toolbar/static/js/jquery.tablesorter.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /_debug_toolbar/static/css/toolbar.css?0.7997070092242211 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:16] "GET /_debug_toolbar/static/img/tick-red.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /admin/static/bootstrap/css/bootstrap.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /admin/static/bootstrap/css/bootstrap-responsive.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /admin/static/select2/select2.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /admin/static/admin/css/admin.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /admin/static/vendor/jquery-1.8.3.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /admin/static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /admin/static/select2/select2.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /admin/static/admin/js/form.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /admin/static/admin/js/filters.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /admin/static/admin/js/actions.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /_debug_toolbar/static/js/jquery.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /_debug_toolbar/static/js/jquery.tablesorter.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /_debug_toolbar/static/js/toolbar.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /_debug_toolbar/static/css/toolbar.css?0.41259157797321677 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /admin/static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:20] "GET /_debug_toolbar/static/img/tick-red.png HTTP/1.1" 304 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /admin/static/bootstrap/css/bootstrap.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /admin/static/bootstrap/css/bootstrap-responsive.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /admin/static/admin/css/admin.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /admin/static/select2/select2.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /admin/static/vendor/jquery-1.8.3.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /admin/static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /admin/static/select2/select2.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /admin/static/admin/js/form.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /admin/static/admin/js/filters.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /admin/static/admin/js/actions.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /_debug_toolbar/static/js/jquery.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /_debug_toolbar/static/js/jquery.tablesorter.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /_debug_toolbar/static/js/toolbar.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /_debug_toolbar/static/css/toolbar.css?0.8296426262240857 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /admin/static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 15:10:36] "GET /_debug_toolbar/static/img/tick-red.png HTTP/1.1" 304 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Running on http://127.0.0.1:5000/
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:28] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:28] "GET /_debug_toolbar/static/css/toolbar.css?0.4240987894590944 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:33] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:33] "GET /_debug_toolbar/static/css/toolbar.css?0.2931672546546906 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:34] "GET /admin/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:34] "GET /_debug_toolbar/static/css/toolbar.css?0.8466179631650448 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:34] "GET /admin/static/bootstrap/img/glyphicons-halflings-white.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:35] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:35] "GET /_debug_toolbar/static/css/toolbar.css?0.5377590567804873 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /admin/static/bootstrap/css/bootstrap.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /admin/static/bootstrap/css/bootstrap-responsive.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /admin/static/admin/css/admin.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /admin/static/select2/select2.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /admin/static/vendor/jquery-1.8.3.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /admin/static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /admin/static/select2/select2.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /admin/static/admin/js/form.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /admin/static/admin/js/filters.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /admin/static/admin/js/actions.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /_debug_toolbar/static/js/jquery.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /_debug_toolbar/static/js/jquery.tablesorter.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /_debug_toolbar/static/js/toolbar.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /_debug_toolbar/static/css/toolbar.css?0.039059033850207925 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /admin/static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:11:44] "GET /_debug_toolbar/static/img/tick-red.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:12:30] "GET /_debug_toolbar/static/img/close.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:12:30] "GET /_debug_toolbar/static/img/indicator.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:14] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:14] "GET /admin/static/bootstrap/css/bootstrap.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:14] "GET /admin/static/bootstrap/css/bootstrap-responsive.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:14] "GET /admin/static/admin/css/admin.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:14] "GET /admin/static/select2/select2.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:14] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:14] "GET /admin/static/vendor/jquery-1.8.3.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:14] "GET /admin/static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:14] "GET /admin/static/select2/select2.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:15] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:15] "GET /admin/static/admin/js/form.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:15] "GET /admin/static/admin/js/filters.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:15] "GET /admin/static/admin/js/actions.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:15] "GET /_debug_toolbar/static/js/jquery.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:15] "GET /_debug_toolbar/static/js/jquery.tablesorter.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:15] "GET /_debug_toolbar/static/js/toolbar.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:15] "GET /_debug_toolbar/static/css/toolbar.css?0.3058976116590202 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:15] "GET /admin/static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:15] "GET /_debug_toolbar/static/img/tick-red.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /admin/static/bootstrap/css/bootstrap.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /admin/static/bootstrap/css/bootstrap-responsive.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /admin/static/admin/css/admin.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /admin/static/select2/select2.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /admin/static/vendor/jquery-1.8.3.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /admin/static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /admin/static/select2/select2.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /admin/static/admin/js/form.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /admin/static/admin/js/filters.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /admin/static/admin/js/actions.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /_debug_toolbar/static/js/jquery.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /_debug_toolbar/static/js/jquery.tablesorter.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /_debug_toolbar/static/js/toolbar.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /_debug_toolbar/static/css/toolbar.css?0.6331306109204888 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /admin/static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:16:16] "GET /_debug_toolbar/static/img/tick-red.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:19:40] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:19:40] "GET /_debug_toolbar/static/css/toolbar.css?0.17252352531068027 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:19:43] "GET /admin/companies/edit/?url=%2Fadmin%2Fcompanies%2F&id=7 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:19:43] "GET /_debug_toolbar/static/css/toolbar.css?0.6651307565625757 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 16:19:44] "GET /_debug_toolbar/static/css/toolbar.css?0.6267349454574287 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1413985394&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 547
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:24:14] "GET /data HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:24:14] "GET /data?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:24:14] "GET /data?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:24:14] "GET /data?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:24:14] "GET /data?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:24:14] "GET /data?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:24:14] "GET /data?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:24:16] "GET /_debug_toolbar/static/css/toolbar.css?0.14678226597607136 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Running on http://127.0.0.1:5000/
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1413985394&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 547
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:42:23] "GET /data HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:42:24] "GET /data?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:42:24] "GET /data?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:42:24] "GET /data?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:42:24] "GET /data?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:42:24] "GET /data?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:42:27] "GET /_debug_toolbar/static/css/toolbar.css?0.3897565745282918 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:42:38] "GET /data HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:42:38] "GET /data?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:42:38] "GET /data?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:42:38] "GET /data?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:42:39] "GET /data?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:42:39] "GET /data?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:42:45] "GET /data?__debugger__=yes&cmd=source&frm=140551549720912&s=EFGQrdnkJYw0B7zuLwWn HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:43:02] "GET /data HTTP/1.1" 401 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:43:48] "GET /data HTTP/1.1" 401 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:43:50] "GET /data HTTP/1.1" 401 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:43:51] "GET /data HTTP/1.1" 401 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:43:56] "GET /data HTTP/1.1" 401 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:43:57] "GET /data HTTP/1.1" 401 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /admin/static/bootstrap/css/bootstrap.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /admin/static/bootstrap/css/bootstrap-responsive.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /admin/static/admin/css/admin.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /admin/static/select2/select2.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /admin/static/vendor/jquery-1.8.3.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /admin/static/select2/select2.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /admin/static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /admin/static/admin/js/form.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /admin/static/admin/js/filters.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /admin/static/admin/js/actions.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /_debug_toolbar/static/js/jquery.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /_debug_toolbar/static/js/jquery.tablesorter.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /_debug_toolbar/static/js/toolbar.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /_debug_toolbar/static/css/toolbar.css?0.8266636589542031 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /admin/static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:38] "GET /_debug_toolbar/static/img/tick-red.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:40] "GET /admin/data/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:40] "GET /_debug_toolbar/static/css/toolbar.css?0.9497260868083686 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:45] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:45] "GET /_debug_toolbar/static/css/toolbar.css?0.20011137635447085 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:46] "GET /admin/data/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:53:47] "GET /_debug_toolbar/static/css/toolbar.css?0.3100425598677248 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:54:06] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:54:06] "GET /_debug_toolbar/static/css/toolbar.css?0.45017800596542656 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:54:07] "GET /admin/data/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:54:07] "GET /_debug_toolbar/static/css/toolbar.css?0.9517161834519356 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Running on http://127.0.0.1:5000/
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:56:53] "GET /admin/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:56:54] "GET /_debug_toolbar/static/css/toolbar.css?0.6735857469029725 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:56:54] "GET /admin/static/bootstrap/img/glyphicons-halflings-white.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:56:55] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:56:55] "GET /_debug_toolbar/static/css/toolbar.css?0.6258357209153473 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:56:56] "GET /admin/data/ HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:56:56] "GET /admin/data/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:56:56] "GET /admin/data/?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:56:56] "GET /admin/data/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:56:57] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:56:57] "GET /admin/data/?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:56:57] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:13] "GET /admin/data/ HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:13] "GET /admin/data/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:13] "GET /admin/data/?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:13] "GET /admin/data/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:13] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:13] "GET /admin/data/?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:13] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:16] "GET /admin HTTP/1.1" 301 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:16] "GET /admin/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:16] "GET /_debug_toolbar/static/css/toolbar.css?0.16077942890115082 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:18] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:18] "GET /_debug_toolbar/static/css/toolbar.css?0.8695014358963817 HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:42] "GET /admin/companies/ HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:42] "GET /admin/companies/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:42] "GET /admin/companies/?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:42] "GET /admin/companies/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:42] "GET /admin/companies/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:42] "GET /admin/companies/?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:58:42] "GET /admin/companies/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /admin/static/bootstrap/css/bootstrap.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /admin/static/bootstrap/css/bootstrap-responsive.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /admin/static/admin/css/admin.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /admin/static/select2/select2.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /admin/static/vendor/jquery-1.8.3.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /admin/static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /admin/static/select2/select2.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /admin/static/admin/js/form.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /admin/static/admin/js/filters.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /admin/static/admin/js/actions.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /_debug_toolbar/static/js/jquery.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /_debug_toolbar/static/js/jquery.tablesorter.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /_debug_toolbar/static/js/toolbar.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /_debug_toolbar/static/css/toolbar.css?0.028021126287057996 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /admin/static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:13] "GET /_debug_toolbar/static/img/tick-red.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:14] "GET /admin/data/ HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:14] "GET /admin/data/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:14] "GET /admin/data/?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:14] "GET /admin/data/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:15] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:15] "GET /admin/data/?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:47] "GET /admin/data/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /admin/static/bootstrap/css/bootstrap.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /admin/static/bootstrap/css/bootstrap-responsive.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /admin/static/admin/css/admin.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /admin/static/select2/select2.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /admin/static/vendor/jquery-1.8.3.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /admin/static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /admin/static/select2/select2.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /admin/static/admin/js/form.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /admin/static/admin/js/filters.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /admin/static/admin/js/actions.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /_debug_toolbar/static/js/jquery.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /_debug_toolbar/static/js/jquery.tablesorter.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /_debug_toolbar/static/js/toolbar.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /_debug_toolbar/static/css/toolbar.css?0.23778928234241903 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /admin/static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 17:59:48] "GET /_debug_toolbar/static/img/tick-red.png HTTP/1.1" 304 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/views.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:00:20] "GET /admin/data/ HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:00:20] "GET /admin/data/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:00:20] "GET /admin/data/?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:00:20] "GET /admin/data/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:00:20] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:00:20] "GET /admin/data/?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:00:20] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Running on http://127.0.0.1:5000/
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:04:52] "GET /admin/data/ HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:04:52] "GET /admin/data/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:04:52] "GET /admin/data/?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:04:52] "GET /admin/data/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:04:52] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:04:52] "GET /admin/data/?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:04:52] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/models.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Running on http://127.0.0.1:5000/
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:06:18] "GET /admin/data/ HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:06:18] "GET /admin/data/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:06:18] "GET /admin/data/?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:06:18] "GET /admin/data/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:06:18] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:06:18] "GET /admin/data/?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:06:18] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/models.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/models.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Running on http://127.0.0.1:5000/
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:08:58] "GET /admin/data/ HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:08:58] "GET /admin/data/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:08:58] "GET /admin/data/?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:08:58] "GET /admin/data/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:08:58] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:08:58] "GET /admin/data/?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:08:58] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/models.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:09:15] "GET /admin/data/ HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:09:15] "GET /admin/data/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:09:15] "GET /admin/data/?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:09:15] "GET /admin/data/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:09:15] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:09:15] "GET /admin/data/?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:09:15] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/models.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Running on http://127.0.0.1:5000/
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:10:04] "GET /admin/data/ HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:10:04] "GET /admin/data/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:10:04] "GET /admin/data/?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:10:04] "GET /admin/data/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:10:04] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:10:04] "GET /admin/data/?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:10:04] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/models.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1413985394&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 547
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:10:57] "GET /admin/data/ HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:10:57] "GET /admin/data/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:10:57] "GET /admin/data/?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:10:57] "GET /admin/data/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:10:58] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:10:58] "GET /admin/data/?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:10:58] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/models.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1413985394&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 547
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:11:05] "GET /admin/data/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:11:05] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1413985394&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 547
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:11:06] "GET /admin/data/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:11:06] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:11:06] "GET /_debug_toolbar/static/css/toolbar.css?0.5745751434005797 HTTP/1.1" 200 -
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1413985394&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 547
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:11:10] "GET /admin/data/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:11:10] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:11:10] "GET /_debug_toolbar/static/css/toolbar.css?0.5348344093654305 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:13:28] "GET /admin/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:13:28] "GET /_debug_toolbar/static/css/toolbar.css?0.42315867030993104 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:13:29] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:13:29] "GET /_debug_toolbar/static/css/toolbar.css?0.7726732899900526 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:24:10] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:24:10] "GET /_debug_toolbar/static/css/toolbar.css?0.09999742405489087 HTTP/1.1" 200 -
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1413985394&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 1215
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:24:20] "GET /admin/data/ HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:24:20] "GET /admin/data/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:24:20] "GET /admin/data/?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:24:20] "GET /admin/data/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:24:20] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:24:20] "GET /admin/data/?__debugger__=yes&cmd=resource&f=source.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:24:20] "GET /admin/data/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/__init__.py', reloading
+INFO:werkzeug: * Restarting with reloader
+INFO:werkzeug: * Detected change in '/home/dbsima/founded-in-romania/app/models.py', reloading
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1413985394&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 1215
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/data/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/static/bootstrap/css/bootstrap.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/static/bootstrap/css/bootstrap-responsive.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/static/admin/css/admin.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/static/select2/select2.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/static/vendor/jquery-1.8.3.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/static/select2/select2.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/static/admin/js/form.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/static/admin/js/filters.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/static/admin/js/actions.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /_debug_toolbar/static/js/jquery.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /_debug_toolbar/static/js/jquery.tablesorter.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /_debug_toolbar/static/js/toolbar.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /_debug_toolbar/static/css/toolbar.css?0.6500239870510995 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /admin/static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:25:24] "GET /_debug_toolbar/static/img/tick-red.png HTTP/1.1" 304 -
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=1414088578&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 547
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:26:05] "GET /admin/data/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:26:05] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:26:05] "GET /_debug_toolbar/static/css/toolbar.css?0.6342934030108154 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:12] "GET /static/css/default.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:12] "GET /static/css/component.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:12] "GET /static/css/font-awesome.min.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:12] "GET /static/js/modernizr.custom.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:12] "GET /static/images/logo.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:12] "GET /static/images/logos/d3703864-ae26-40a9-aaf0-143723e608ee.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:12] "GET /static/images/logo-dracula.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:12] "GET /_debug_toolbar/static/css/toolbar.css?0.9214014827739447 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:12] "GET /static/fonts/fontawesome-webfont.woff?v=4.1.0 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:50] "GET /admin HTTP/1.1" 301 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:50] "GET /admin/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:50] "GET /_debug_toolbar/static/css/toolbar.css?0.44493322377093136 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:52] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:29:52] "GET /_debug_toolbar/static/css/toolbar.css?0.7585434440989047 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /admin/static/bootstrap/css/bootstrap.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /admin/static/bootstrap/css/bootstrap-responsive.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /admin/static/admin/css/admin.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /admin/static/select2/select2.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.css HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /admin/static/vendor/jquery-1.8.3.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /admin/static/bootstrap/js/bootstrap.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /admin/static/select2/select2.min.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /admin/static/datetimepicker/bootstrap-datetimepicker.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /admin/static/admin/js/form.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /admin/static/admin/js/filters.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /admin/static/admin/js/actions.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /_debug_toolbar/static/js/jquery.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /_debug_toolbar/static/js/jquery.tablesorter.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /_debug_toolbar/static/js/toolbar.js HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /admin/static/bootstrap/img/glyphicons-halflings.png HTTP/1.1" 304 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /_debug_toolbar/static/css/toolbar.css?0.08689952339045703 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:30:01] "GET /_debug_toolbar/static/img/tick-red.png HTTP/1.1" 304 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/
+INFO:werkzeug: * Restarting with reloader
+DEBUG:werkzeug:Initializing Flask-DebugToolbar log handler
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:33:45] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:33:45] "GET /_debug_toolbar/static/css/toolbar.css?0.22382890130393207 HTTP/1.1" 200 -
+INFO:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): api.typeform.com
+DEBUG:requests.packages.urllib3.connectionpool:"GET /v0/form/kEfvl8?completed=true&since=0&key=39169ffae6b835cf83fb3c02b38ed8add48f389c HTTP/1.1" 200 4909
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:33:49] "GET /admin/data/ HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:33:49] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:33:49] "GET /_debug_toolbar/static/css/toolbar.css?0.14398285490460694 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:35:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:35:05] "GET /_debug_toolbar/static/css/toolbar.css?0.5488448399119079 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:35:06] "GET /_debug_toolbar/static/css/toolbar.css?0.9870016109198332 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:35:08] "GET /admin/companies/edit/?url=%2Fadmin%2Fcompanies%2F&id=6 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:35:08] "GET /_debug_toolbar/static/css/toolbar.css?0.7676435154862702 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:36:17] "POST /admin/companies/edit/?url=%2Fadmin%2Fcompanies%2F&id=6 HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:36:17] "GET /admin/companies/edit/?url=%2Fadmin%2Fcompanies%2F&id=6 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:36:18] "GET /_debug_toolbar/static/css/toolbar.css?0.4819434811361134 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:36:23] "POST /admin/companies/edit/?url=%2Fadmin%2Fcompanies%2F&id=6 HTTP/1.1" 302 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:36:23] "GET /admin/companies/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:36:23] "GET /_debug_toolbar/static/css/toolbar.css?0.07794326450675726 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:36:25] "GET /admin/ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:36:25] "GET /_debug_toolbar/static/css/toolbar.css?0.7853191229514778 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:36:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:36:29] "GET /static/images/logos/6746c625-99f4-4623-a59f-2e8a76a4e201.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [23/Oct/2014 18:36:29] "GET /_debug_toolbar/static/css/toolbar.css?0.20303566567599773 HTTP/1.1" 200 -

@@ -6,8 +6,7 @@ include
 env
 venv
 *.pyc
-instance/
+error.log
 app/static/images/logos/
-
 # Mac OS X custom attribute files
 .DS_Store

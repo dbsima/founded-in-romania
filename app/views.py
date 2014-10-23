@@ -9,31 +9,30 @@ from jinja2 import Markup
 
 from wtforms.fields import SelectField
 
-from flask import  redirect, url_for, request, render_template
+from flask import redirect, url_for, request, render_template
 from flask.ext import login, admin
-from flask.ext.admin import helpers, expose, form
+from flask.ext.admin import helpers, expose, form, BaseView
 from flask.ext.admin.contrib import sqla
 from flask.ext.admin.form import rules
 
-from .models import db, User, Company
+from .models import db, User, Company, TypeformAPI
 from .forms import LoginForm
 
 from flask.ext.admin.base import BaseView, expose
 from flask.ext.admin.actions import action, ActionsMixin
 
+
 class UserView(sqla.ModelView):
     """
-        
-    """ 
+    General user view class (admin for now)
+    """
     def is_accessible(self):
         return login.current_user.is_authenticated()
-    
 
 
-# Create 
 class AdminIndexView(admin.AdminIndexView):
     """
-    Customized index view class that handles login/logout    
+    Customized index view class that handles login/logout   
     """
     @expose('/')
     def index(self):
@@ -52,7 +51,7 @@ class AdminIndexView(admin.AdminIndexView):
         if login.current_user.is_authenticated():
             return redirect(url_for('.index'))
         self._template_args['form'] = form
-        #self._template_args['link'] = link
+
         return super(AdminIndexView, self).index()
 
     @expose('/logout/')
@@ -69,11 +68,7 @@ class CompanyView(sqla.ModelView):
     """
        View configuration for a company and the company list 
     """
-    
-    #@expose('/')
-    #def index(self):
-    #    return render_template('admin/model/list.html')
-    
+
     column_list = ('name',
                    'founded_year',
                    'logo_submited',
@@ -111,11 +106,12 @@ class CompanyView(sqla.ModelView):
             'namegen': prefix_name
         },
         'status': dict(
-            choices=[('pending', 'pending'), ('accepted', 'accepted'), ('hidden', 'hidden')])
+            choices=[('pending', 'pending'), \
+                     ('accepted', 'accepted'), \
+                     ('hidden', 'hidden')])
     }
     
     def is_accessible(self):
-        print "here"
         return login.current_user.is_authenticated()
     
     def _link_logo_submitted(view, context, model, name):
@@ -183,4 +179,17 @@ class CompanyView(sqla.ModelView):
         for item in items:
             Company.query.filter_by(id=item).update({'status': 'hidden'})
         db.session.commit()
+        
+
+class TypeformView(BaseView):
+    @expose('/')
+    def index(self):
+        tf = TypeformAPI()
+        tf.get_data()
+        tf.set_fields()
+        tf.update_db()
+        return redirect('/admin/companies/')
+    
+    def is_accessible(self):
+        return login.current_user.is_authenticated()
             

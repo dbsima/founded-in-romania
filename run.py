@@ -7,9 +7,9 @@ but it will see a lot of mileage in development.
 import os, argparse
 from app import app, db
 from werkzeug.security import generate_password_hash
-from app.models import User, Pair, Company
+from app.models import User, Pair, Company, TypeformAPI
 
-from app import TypeformAPI
+from flask import current_app
 
 def database_setup():
     """
@@ -30,10 +30,6 @@ def database_setup():
     # Commit changes to the database
     db.session.commit()
     
-    tf = TypeformAPI()
-    tf.get_data()
-    tf.set_fields()
-    tf.update_db()
     #print tf.fields
     
     print 'Database setup completed. Now run the app without --setup.'
