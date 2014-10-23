@@ -4,6 +4,15 @@
     {{ super() }}
         <meta property="og:url" content="http://foundedinromania.com/" />
         <meta property="og:type" content="website" />
+
+        <script>
+        /**
+        * Function that tracks a click on an outbound link in Google Analytics.
+        */
+        var trackOutboundLink = function(url) {
+           ga('send', 'event', 'outbound', 'click', url);
+        }
+        </script>
 {% endblock %}
 {% block container_header%}
     <h1>Founded in Romania - The most innovative startups in Romania</h1>
@@ -17,7 +26,7 @@
 <ul class="cbp-rfgrid">
     {% for company in companies %}
     <li>
-        <a href="{{ company.url }}" target="_blank">
+        <a href="{{ company.url }}" target="_blank" onclick="trackOutboundLink('{{ company.url }}'); return true;">
             <img src="static/images/logos/{{ company.logo }}" />
             <div>
                 <h3>{{ company.name }}</h3>
