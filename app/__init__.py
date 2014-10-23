@@ -174,12 +174,13 @@ class TypeformAPI:
         db.session.commit()
 
 
-@app.route("/data", methods=['GET'])
+@app.route("/admin/companies", methods=['GET'])
 def get_companies():
     tf = TypeformAPI()
     tf.get_data()
     tf.set_fields()
     tf.update_db()
+    print "here"
     return json.dumps(tf.responses)
 
 
@@ -211,4 +212,4 @@ init_login()
 admin = admin.Admin(app, 'Admin', index_view=AdminIndexView(), base_template='layout.html')
 
 # Add view
-admin.add_view(CompanyView(Company, db.session, name='Companies', url='/companies'))
+admin.add_view(CompanyView(Company, db.session, name='Companies', endpoint="companies"))#url='companies'))

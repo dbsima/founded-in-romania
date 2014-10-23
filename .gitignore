@@ -7,6 +7,7 @@ env
 venv
 *.pyc
 instance/
+app/static/images/logos/
 
 # Mac OS X custom attribute files
 .DS_Store

@@ -48,6 +48,9 @@ if __name__ == '__main__':
         database_setup()
     else:
         try:
+            import logging
+            logging.basicConfig(filename='error.log',level=logging.DEBUG)
+            
             app.run()
         except Exception:
             app.logger.exception('Failed')

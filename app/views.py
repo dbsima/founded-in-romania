@@ -9,7 +9,7 @@ from jinja2 import Markup
 
 from wtforms.fields import SelectField
 
-from flask import  redirect, url_for, request
+from flask import  redirect, url_for, request, render_template
 from flask.ext import login, admin
 from flask.ext.admin import helpers, expose, form
 from flask.ext.admin.contrib import sqla
@@ -67,8 +67,13 @@ logo_path = os.path.join(app_dir, 'app/static/images/logos')
 
 class CompanyView(sqla.ModelView):
     """
-        
+       View configuration for a company and the company list 
     """
+    
+    #@expose('/')
+    #def index(self):
+    #    return render_template('admin/model/list.html')
+    
     column_list = ('name',
                    'founded_year',
                    'logo_submited',
@@ -82,7 +87,8 @@ class CompanyView(sqla.ModelView):
     column_default_sort = ('date_submit', True)
     column_filters = ('founded_year', 'status')
     
-    page_size = 20
+    page_size = 50
+    
     
     #form_excluded_columns = ['url', ]
     
@@ -109,6 +115,7 @@ class CompanyView(sqla.ModelView):
     }
     
     def is_accessible(self):
+        print "here"
         return login.current_user.is_authenticated()
     
     def _link_logo_submitted(view, context, model, name):
