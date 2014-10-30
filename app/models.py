@@ -67,6 +67,9 @@ class Company(db.Model):
         """
         return self.name
 
+    def __repr__(self):
+        return '<id {}>'.format(self.id)
+
 
 class Pair(db.Model):
     """

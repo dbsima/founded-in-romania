@@ -3,8 +3,6 @@ import argparse
 
 from werkzeug.security import generate_password_hash
 
-from flask import current_app
-
 from app import app, db
 from app.models import User, Pair, Company, TypeformAPI
 
