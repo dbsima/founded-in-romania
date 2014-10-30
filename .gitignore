@@ -8,5 +8,6 @@ venv
 *.pyc
 error.log
 app/static/images/logos/
+config.py
 # Mac OS X custom attribute files
 .DS_Store

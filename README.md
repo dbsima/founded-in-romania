@@ -13,7 +13,6 @@ sudo -u postgres createdb -O myuser mydb
 ```shell
 sudo /etc/init.d/postgresql restart
 ```
-
 ### Install the Python packages manager
 ```shell
 sudo apt-get install python-pip
@@ -27,6 +26,11 @@ sudo pip install virtualenv
 cd founded-in-romania
 virtualenv venv
 ```
+### Add the following lines to venv/bin/activate file
+```shell
+export DATABASE_URL="postgresql://myuser:password@localhost/mydb"
+export APP_SETTINGS="config.DevelopmentConfig"
+```
 ### Activate virtualenv
 ```shell
 source venv/bin/activate
@@ -35,9 +39,8 @@ source venv/bin/activate
 ```shell
 pip install -r requirements.txt
 ```
-
-### Tested
+### Access the app
 ```shell
-python run.py
+python run.py --setup
 ```
-Go to http://localhost:8080/ and to http://localhost:8080/data to populate the db
+Go to http://localhost:5000/

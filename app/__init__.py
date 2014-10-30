@@ -3,7 +3,9 @@ This file initializes your application and brings together all of the various
 components.
 '''
 
-import os, requests, json
+import os
+import requests
+import json
 
 from flask import Flask, url_for, redirect, render_template, request, abort
 from flask.ext import admin, login
@@ -22,14 +24,8 @@ from sqlalchemy.orm.exc import MultipleResultsFound
 from .models import db, User, Company, Pair
 from .views import AdminIndexView, CompanyView, TypeformView
 
-"""
-If we set instance_relative_config=True when we create our app with the Flask()
-call, app.config.from_pyfile() will load the specified file from the
-instance/config.py
-"""
-app = Flask(__name__)#, instance_relative_config=True)
-app.config.from_object('config')
-#app.config.from_pyfile('config.py')
+app = Flask(__name__)
+app.config.from_object(os.environ['APP_SETTINGS'])
 
 toolbar = DebugToolbarExtension(app)
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
@@ -51,7 +47,6 @@ def init_login():
         return db.session.query(User).get(user_id)
 
 
-# Flask views
 @app.route('/')
 def index():
     entries = Company.query.\
@@ -59,8 +54,7 @@ def index():
                     filter_by(status='accepted').\
                     order_by(Company.name).all()
     companies = [dict(name=row[0], url=row[1], logo=row[2]) for row in entries]
-    
-    #print entries
+
     return render_template('index.html', companies=companies)
 
 

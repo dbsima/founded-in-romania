@@ -6,19 +6,22 @@ several modules in the same way as views.py.
 from flask.ext.admin.actions import action
 from flask.ext.sqlalchemy import SQLAlchemy
 
-import requests, json
+import requests
+import json
+
 from flask import current_app
 
 db = SQLAlchemy()
 
+
 class User(db.Model):
     """
-        User database model
+    User database model
     """
     id = db.Column(db.Integer, primary_key=True)
     login = db.Column(db.String(80), unique=True)
     password = db.Column(db.String(128))
- 
+
     def is_authenticated(self):
         """Flask-Login integration"""
         return True
@@ -34,14 +37,14 @@ class User(db.Model):
 
     def __unicode__(self):
         """
-            Required for administrative interface
+        Required for administrative interface
         """
         return self.username
 
 
 class Company(db.Model):
     """
-        Company database model
+    Company database model
     """
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80))
@@ -60,14 +63,14 @@ class Company(db.Model):
 
     def __unicode__(self):
         """
-            Required for administrative interface
+        Required for administrative interface
         """
         return self.name
 
-    
+
 class Pair(db.Model):
     """
-        Key-Value pairs database model
+    Key-Value pairs database model
     """
     id = db.Column(db.Integer, primary_key=True)
     key = db.Column(db.String(80), unique=True)
@@ -75,21 +78,21 @@ class Pair(db.Model):
 
     def __unicode__(self):
         """
-            Required for administrative interface
+        Required for administrative interface
         """
         return self.key
 
-    
+
 def has_key(d, key):
     if key not in d:
         return None
     return d[key]
 
+
 class TypeformAPI:
     def __init__(self):
         self.fields = {}
-            
-            
+
     def get_data(self):
         last_date = Pair.query.with_entities(Pair.val).filter_by(key='since').one()
         since = last_date[0]
@@ -98,14 +101,14 @@ class TypeformAPI:
         payload = {
             'key': current_app.config['TYPEFORM_API_KEY'],
             'completed': 'true',
-            'since' : since
+            'since': since
         }
 
         r = requests.get(typeform_url, params=payload)
         json_data = json.loads(r.text)
         self.questions = json_data['questions']
         self.responses = json_data['responses']
-            
+
     def set_fields(self):
         for question in self.questions:
             if question['question'] == 'Startup name':
@@ -122,10 +125,11 @@ class TypeformAPI:
                 self.fields['contact_name'] = question['id']
             elif question['question'] == 'Contact email address':
                 self.fields['contact_email'] = question['id']
-        
+
     def update_db(self):
-        if len(self.responses) == 0: return
-        
+        if len(self.responses) == 0:
+            return
+
         import datetime
         from datetime import timedelta
         import time
@@ -134,8 +138,7 @@ class TypeformAPI:
             date_land = response['metadata']['date_land']
             date_submit = datetime.datetime.strptime(date_land, "%Y-%m-%d %H:%M:%S")
 
-            #print response
-            # get company details
+            # Get company details
             name = has_key(response['answers'], self.fields['name'])
             url = has_key(response['answers'], self.fields['web_address'])
             url_to_logo = has_key(response['answers'], self.fields['url_logo'])
@@ -155,15 +158,15 @@ class TypeformAPI:
                                url=url,
                                logo_submited=url_to_logo,
                                contact_email=contact_email,
-                               contact_name = contact_name,
-                               twitter = twitter,
-                               founded_year = founded_year,
-                               date_submit = date_submit,
+                               contact_name=contact_name,
+                               twitter=twitter,
+                               founded_year=founded_year,
+                               date_submit=date_submit,
                                status=status)
             # Add company to database
             db.session.add(company)
 
-        # know there is another last date
+        # Now there is another last date (update the database)
         since = time.mktime((date_submit + timedelta(hours=2)).timetuple())
         last_date = Pair.query.with_entities(Pair.val).filter_by(key='since').update({'val': since})
 
