@@ -3,11 +3,12 @@
 bin
 lib
 include
-env
 venv
 *.pyc
 error.log
 config.py
 rocket.pid
+fir.pem
+
 # Mac OS X custom attribute files
 .DS_Store
