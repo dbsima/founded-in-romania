@@ -11,20 +11,20 @@
     <meta property="og:title" content="Founded in Romania - The most innovative startups in the Romania" />
 		<meta property="og:description" content="Romania is Europe's hot new startup scene. We list innovative startups with Romanian roots." />
 		<meta property="og:site_name" content="Founded in Romania" />
-		<meta property="og:image" content="http://foundedinromania.com/images/avatar.png" />
+		<meta property="og:image" content="http://foundedinromania.com/static/images/avatar.png" />
 
-        <meta name="twitter:site" content="@foundedromania" />
-        <meta name="twitter:title" content="Founded in Romania - The most innovative startups in the Romania" />
+		<meta name="twitter:site" content="@foundedromania" />
+		<meta name="twitter:title" content="Founded in Romania - The most innovative startups in the Romania" />
 
-        <meta name="author" content="cloudients" />
-		<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }} " />
-        <link rel="apple-touch-icon-precomposed" href="http://foundedinromania.com/images/avatar.png" />
+		<meta name="author" content="cloudients" />
+		<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" />
+		<link rel="apple-touch-icon-precomposed" href="{{ url_for('static', filename='images/avatar.png') }}" />
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/default.css') }}" />
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/component.css') }}" />
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
 		<script src="{{ url_for('static', filename='js/modernizr.custom.js') }}"></script>
 
-        <title>{% block title %}{% endblock %}</title>
+		<title>{% block title %}{% endblock %}</title>
         {% endblock %}
 	</head>
 	<body>

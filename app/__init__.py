@@ -1,8 +1,3 @@
-'''
-This file initializes your application and brings together all of the various
-components.
-'''
-
 import os
 import requests
 import json
@@ -30,6 +25,7 @@ app.config.from_object(os.environ['APP_SETTINGS'])
 toolbar = DebugToolbarExtension(app)
 app.config['DEBUG_TB_INTERCEPT_REDIRECTS'] = False
 
+# handle the proxy headers set in the Nginx configuration
 app.wsgi_app = ProxyFix(app.wsgi_app)
 
 db.app = app
