@@ -1,8 +1,3 @@
-"""
-This is where you define the models of your application. This may be split into
-several modules in the same way as views.py.
-"""
-
 from flask.ext.admin.actions import action
 from flask.ext.sqlalchemy import SQLAlchemy
 
@@ -23,7 +18,6 @@ class User(db.Model):
     password = db.Column(db.String(128))
 
     def is_authenticated(self):
-        """Flask-Login integration"""
         return True
 
     def is_active(self):
@@ -36,9 +30,6 @@ class User(db.Model):
         return self.id
 
     def __unicode__(self):
-        """
-        Required for administrative interface
-        """
         return self.username
 
 
@@ -62,9 +53,6 @@ class Company(db.Model):
     status = db.Column(db.String(64))
 
     def __unicode__(self):
-        """
-        Required for administrative interface
-        """
         return self.name
 
     def __repr__(self):
@@ -78,12 +66,6 @@ class Pair(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     key = db.Column(db.String(80), unique=True)
     val = db.Column(db.Integer)
-
-    def __unicode__(self):
-        """
-        Required for administrative interface
-        """
-        return self.key
 
 
 def has_key(d, key):
