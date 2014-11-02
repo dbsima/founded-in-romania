@@ -104,7 +104,7 @@ class TypeformAPI:
                 self.fields['web_address'] = question['id']
             elif question['question'] == 'Twitter handle':
                 self.fields['twitter'] = question['id']
-            elif question['question'] == 'URL to high-resolution (white) logo':
+            elif question['question'] == 'URL to high-resolution logo (.psd, .ai or another)':
                 self.fields['url_logo'] = question['id']
             elif question['question'] == 'Contact person':
                 self.fields['contact_name'] = question['id']
