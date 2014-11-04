@@ -71,6 +71,10 @@ def site_verification():
 def robots_txt():
     return app.send_static_file("robots.txt")
 
+@app.route("/sitemap.xml")
+def sitemap_xml():
+    return app.send_static_file("sitemap.xml")
+
 @app.errorhandler(404)
 def not_found(e):
     return render_template('404.html'), 404
