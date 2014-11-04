@@ -5,8 +5,9 @@
 
 ## Features
   1. Shows the first page with the list of startups.
-  2. Shows an about page about the country of the startups.
+  2. Shows an about page for the origin country of the startups.
   3. Has a backoffice to ease the management of the database.
+  4. Register new companies with a Typeform form
 
 ## Technologies
 
@@ -22,62 +23,63 @@
 
 ## Installation Instructions
 
-### Prerequisites
+### Installing on Linux / Ubuntu
 
-#### Relational Database (PostgreSQL)
-
-Before beginning installation, we must first set the database.  For Ubuntu, Fabric will do that for you, but for you're a Mac OS user simply [download](http://postgresapp.com/) and install.
-
-Many common tasks, such as installing dependencies, deploying servers, migrations,
-and configurations are in `fabfile.py`.
-
-#### Python packages
-
-From inside the repository, run:
-
-    pip install -r requirements.txt
-
-
-### Install PostgreSQL
+#### Install and configure PostgreSQL
+1. Install PostgreSQL
 ```shell
 sudo apt-get install postgresql postgresql-contrib pgadmin3
 ```
-### Create a database user with full rights on it
+2. Create a database user with full rights on it
 ```shell
 sudo -u postgres createuser -D -A -P myuser
 sudo -u postgres createdb -O myuser mydb
 ```
-### Restart the PostgreSQL server
+3. Restart the PostgreSQL server
 ```shell
 sudo /etc/init.d/postgresql restart
 ```
-### Install the Python packages manager
+#### Install the Python packages manager
 ```shell
 sudo apt-get install python-pip
 ```
-### Install virtualenv Python package
+#### Work in a virtualenv Python package
+1. Install virtualenv
 ```shell
 sudo pip install virtualenv
 ```
-### Create virtualenv
+2. After cloning the repo create the virtualenv
 ```shell
 cd founded-in-romania
 virtualenv venv
 ```
-### Add the following lines to venv/bin/activate file
+3. Add the following lines to venv/bin/activate file
 ```shell
 export DATABASE_URL="postgresql://myuser:password@localhost/mydb"
 export APP_SETTINGS="config.DevelopmentConfig"
 ```
-### Activate virtualenv
+4. Activate virtualenv
 ```shell
 source venv/bin/activate
 ```
-### Install all necessary packages
+5. Install all necessary packages
 ```shell
 pip install -r requirements.txt
 ```
-### Access the app
+## Configure app
+1. Go to [Typeform](http://www.typeform.com/) and create a typeform with the exact following questions:
+  * "Startup name" (short text, required)
+  * "Year founded" (number, required)
+  * "Web address" (website, required)
+  * "Twitter handle" (short text)
+  * "URL to high-resolution logo (.psd, .ai or another)" (website, required)
+  * "Contact person" (short text, required)
+  * "Contact email address" (email, required)
+
+Note: these fields are required for this app to work, but you can adapt them as you want
+
+2. Change config.py with the variables suitable for you and add the file to .gitignore
+## Access the app
 ```shell
 python run.py --setup
 ```
