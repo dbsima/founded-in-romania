@@ -26,59 +26,62 @@
 ### Installing on Linux / Ubuntu
 
 #### Install and configure PostgreSQL
-1. Install PostgreSQL
-```shell
-sudo apt-get install postgresql postgresql-contrib pgadmin3
-```
-2. Create a database user with full rights on it
-```shell
-sudo -u postgres createuser -D -A -P myuser
-sudo -u postgres createdb -O myuser mydb
-```
-3. Restart the PostgreSQL server
-```shell
-sudo /etc/init.d/postgresql restart
-```
+  1. Install PostgreSQL
+
+    sudo apt-get install postgresql postgresql-contrib pgadmin3
+
+  2. Create a database user with full rights on it
+
+  sudo -u postgres createuser -D -A -P myuser
+  sudo -u postgres createdb -O myuser mydb
+
+  3. Restart the PostgreSQL server
+
+  sudo /etc/init.d/postgresql restart
+
 #### Install the Python packages manager
-```shell
-sudo apt-get install python-pip
-```
+  ```shell
+  sudo apt-get install python-pip
+  ```
 #### Work in a virtualenv Python package
-1. Install virtualenv
-```shell
-sudo pip install virtualenv
-```
-2. After cloning the repo create the virtualenv
-```shell
-cd founded-in-romania
-virtualenv venv
-```
-3. Add the following lines to venv/bin/activate file
-```shell
-export DATABASE_URL="postgresql://myuser:password@localhost/mydb"
-export APP_SETTINGS="config.DevelopmentConfig"
-```
-4. Activate virtualenv
-```shell
-source venv/bin/activate
-```
-5. Install all necessary packages
-```shell
-pip install -r requirements.txt
-```
+  1. Install virtualenv
+
+  sudo pip install virtualenv
+
+  2. After cloning the repo create the virtualenv
+
+  cd founded-in-romania
+  virtualenv venv
+
+  3. Add the following lines to venv/bin/activate file
+
+  export DATABASE_URL="postgresql://myuser:password@localhost/mydb"
+  export APP_SETTINGS="config.DevelopmentConfig"
+
+  4. Activate virtualenv
+
+  source venv/bin/activate
+
+  5. Install all necessary packages
+
+  pip install -r requirements.txt
+
+
 ## Configure app
-1. Go to [Typeform](http://www.typeform.com/) and create a typeform with the exact following questions:
-  * "Startup name" (short text, required)
-  * "Year founded" (number, required)
-  * "Web address" (website, required)
-  * "Twitter handle" (short text)
-  * "URL to high-resolution logo (.psd, .ai or another)" (website, required)
-  * "Contact person" (short text, required)
-  * "Contact email address" (email, required)
 
-Note: these fields are required for this app to work, but you can adapt them as you want
+  1. Go to [Typeform](http://www.typeform.com/) and create a typeform with the exact following questions:
+    * "Startup name" (short text, required)
+    * "Year founded" (number, required)
+    * "Web address" (website, required)
+    * "Twitter handle" (short text)
+    * "URL to high-resolution logo (.psd, .ai or another)" (website, required)
+    * "Contact person" (short text, required)
+    * "Contact email address" (email, required)
 
-2. Change config.py with the variables suitable for you and add the file to .gitignore
+  Note: these fields are required for this app to work, but you can adapt them as you want
+
+  2. Change config.py with the variables suitable for you and add the file to .gitignore
+
 ## Access the app
 ```shell
 python run.py --setup
