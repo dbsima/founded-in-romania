@@ -9,14 +9,15 @@ from app.models import User, Pair, Company, TypeformAPI
 
 def database_setup():
     """
-    Create db and populate it with what you get from the Typeform API
+    Setup database
     """
     # Create tables
     db.drop_all()
     db.create_all()
 
     # Add admin account
-    admin = User(login="admin", password=generate_password_hash("p4r0l4#3st3#0k"))
+    admin = User(login=app.config['ADMIN_USER'],\
+                password=generate_password_hash(app.config['ADMIN_PASS']))
     db.session.add(admin)
 
     # Initialize 'since' variable

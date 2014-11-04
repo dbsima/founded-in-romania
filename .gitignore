@@ -6,7 +6,7 @@ include
 venv
 *.pyc
 error.log
-config.py
+fabfile.py
 rocket.pid
 fir.pem
 
