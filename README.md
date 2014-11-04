@@ -27,44 +27,47 @@
 
 #### Install and configure PostgreSQL
   1. Install PostgreSQL
-        sudo apt-get install postgresql postgresql-contrib pgadmin3
+    ```shell
+    sudo apt-get install postgresql postgresql-contrib pgadmin3
+    ```
 
   2. Create a database user with full rights on it
-
-        sudo -u postgres createuser -D -A -P myuser
-        sudo -u postgres createdb -O myuser mydb
-
+    ```shell
+    sudo -u postgres createuser -D -A -P myuser
+    sudo -u postgres createdb -O myuser mydb
+    ```
   3. Restart the PostgreSQL server
-
-        sudo /etc/init.d/postgresql restart
-
+    ```shell
+    sudo /etc/init.d/postgresql restart
+    ```
 #### Install the Python packages manager
   ```shell
   sudo apt-get install python-pip
   ```
 #### Work in a virtualenv Python package
   1. Install virtualenv
-
-        sudo pip install virtualenv
-
+    ```shell
+    sudo pip install virtualenv
+    ```
   2. After cloning the repo create the virtualenv
-
-        cd founded-in-romania
-        virtualenv venv
-
+    ```shell
+    cd founded-in-romania
+    virtualenv venv
+    ```
   3. Add the following lines to venv/bin/activate file
-
-        export DATABASE_URL="postgresql://myuser:password@localhost/mydb"
-        export APP_SETTINGS="config.DevelopmentConfig"
+    ```shell
+    export DATABASE_URL="postgresql://myuser:password@localhost/mydb"
+    export APP_SETTINGS="config.DevelopmentConfig"
+    ```
 
   4. Activate virtualenv
-
-        source venv/bin/activate
-
+    ```shell
+    source venv/bin/activate
+    ```
   5. Install all necessary packages
-
-        pip install -r requirements.txt
-
+    ```shell
+    pip install -r requirements.txt
+    ```
 
 ## Configure app
 
