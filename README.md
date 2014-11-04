@@ -36,24 +36,29 @@
     sudo -u postgres createuser -D -A -P myuser
     sudo -u postgres createdb -O myuser mydb
     ```
+
   3. Restart the PostgreSQL server
     ```shell
     sudo /etc/init.d/postgresql restart
     ```
+
 #### Install the Python packages manager
   ```shell
   sudo apt-get install python-pip
   ```
+
 #### Work in a virtualenv Python package
   1. Install virtualenv
     ```shell
     sudo pip install virtualenv
     ```
+
   2. After cloning the repo create the virtualenv
     ```shell
     cd founded-in-romania
     virtualenv venv
     ```
+
   3. Add the following lines to venv/bin/activate file
     ```shell
     export DATABASE_URL="postgresql://myuser:password@localhost/mydb"
@@ -64,6 +69,7 @@
     ```shell
     source venv/bin/activate
     ```
+
   5. Install all necessary packages
     ```shell
     pip install -r requirements.txt
