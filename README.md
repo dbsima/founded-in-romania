@@ -27,17 +27,18 @@
 
 #### Install and configure PostgreSQL
   1. Install PostgreSQL
-
-    sudo apt-get install postgresql postgresql-contrib pgadmin3
+      ```shell
+      sudo apt-get install postgresql postgresql-contrib pgadmin3
+      ```
 
   2. Create a database user with full rights on it
 
-  sudo -u postgres createuser -D -A -P myuser
-  sudo -u postgres createdb -O myuser mydb
+        sudo -u postgres createuser -D -A -P myuser
+        sudo -u postgres createdb -O myuser mydb
 
   3. Restart the PostgreSQL server
 
-  sudo /etc/init.d/postgresql restart
+        sudo /etc/init.d/postgresql restart
 
 #### Install the Python packages manager
   ```shell
