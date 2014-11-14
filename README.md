@@ -99,6 +99,6 @@ Go to http://localhost:5000/
 
 License
 =======
-This software is licensed under the MIT License. See [LICENSE.md] (https://github.com/dbsima/founded-in-romania/blob/master/LICENSE.md) for details.
+This software is licensed under the MIT License. See [LICENSE.md] (https://github.com/FoundedX/founded-in-romania/blob/master/LICENSE.md) for details.
 
 Portions of this software are copyright of their own owners as described in the files containing them.
