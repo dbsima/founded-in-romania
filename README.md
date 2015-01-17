@@ -94,7 +94,7 @@
 ```shell
 python run.py --setup
 ```
-Go to http://localhost:5000/
+Go to http://localhost:5000/ for website and http://localhost:5000/admin for the administrator interface
 
 
 License
