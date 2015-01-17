@@ -96,19 +96,20 @@ class TypeformAPI:
 
     def set_fields(self):
         for question in self.questions:
-            if question['question'] == 'Startup name':
+            question_name = question['question'].lower()
+            if "startup" in question_name:
                 self.fields['name'] = question['id']
-            elif question['question'] == 'Year founded':
+            elif "year" in question_name:
                 self.fields['year'] = question['id']
-            elif question['question'] == 'Web address':
+            elif "address" in question_name:
                 self.fields['web_address'] = question['id']
-            elif question['question'] == 'Twitter handle':
+            elif "twitter" in question_name:
                 self.fields['twitter'] = question['id']
-            elif question['question'] == 'URL to high-resolution logo (.psd, .ai or another)':
+            elif "logo" in question_name:
                 self.fields['url_logo'] = question['id']
-            elif question['question'] == 'Contact person':
+            elif "person" in question_name:
                 self.fields['contact_name'] = question['id']
-            elif question['question'] == 'Contact email address':
+            elif "email" in question_name:
                 self.fields['contact_email'] = question['id']
 
     def update_db(self):
