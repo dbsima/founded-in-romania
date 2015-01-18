@@ -1,6 +1,6 @@
 # Founded In X
 
-  * Web CMS for founded-in-X websites, originally forked from [www.foundedinromania.com](http://foundedinromania.com).
+  * Website to be used for founded-in-X, originally forked from [www.foundedinromania.com](http://foundedinromania.com).
   * Created by [Cloudients](http://www.cloudients.com).
 
 ## Features
@@ -77,14 +77,14 @@
 
 ## Configure app
 
-  1. Go to [Typeform](http://www.typeform.com/) and create a typeform with the exact following questions:
-    * "Startup name" (short text, required)
-    * "Year founded" (number, required)
-    * "Web address" (website, required)
-    * "Twitter handle" (short text)
-    * "URL to high-resolution logo (.psd, .ai or another)" (website, required)
-    * "Contact person" (short text, required)
-    * "Contact email address" (email, required)
+  1. Go to [Typeform](http://www.typeform.com/) and create a typeform with similar questions:
+    * "Startup name" (short text, required) - must contain "startup"
+    * "Year founded" (number, required) - must contain "year"
+    * "Web address" (website, required) - must contain "address"
+    * "Twitter handle" (short text) - must contain "twitter"
+    * "URL to high-resolution logo (.psd, .ai or another)" (website, required) - must contain "logo"
+    * "Contact person" (short text, required) - must contain "person"
+    * "Contact email address" (email, required) - must contain "email"
 
   Note: these fields are required for this app to work, but you can adapt them as you want
 
