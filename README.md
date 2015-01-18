@@ -1,6 +1,6 @@
-# Founded In Romania
+# Founded In X
 
-  * Website for [www.foundedinromania.com](http://foundedinromania.com).
+  * Web CMS for founded-in-X websites, originally forked from [www.foundedinromania.com](http://foundedinromania.com).
   * Created by [Cloudients](http://www.cloudients.com).
 
 ## Features
