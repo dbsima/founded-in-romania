@@ -2,6 +2,8 @@ from wtforms import form, fields, validators
 from werkzeug.security import check_password_hash
 
 from .models import db, User
+from flask.ext.admin.form import FileUploadField
+from cloudinary import uploader
 
 
 class LoginForm(form.Form):
@@ -23,3 +25,10 @@ class LoginForm(form.Form):
 
     def get_user(self):
         return db.session.query(User).filter_by(login=self.login.data).first()
+
+
+class FileUploadFieldToCloudinary(FileUploadField):
+    def _save_file(self, data, filename):
+        link = uploader.upload(data)
+
+        return link['secure_url']
