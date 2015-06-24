@@ -13,7 +13,7 @@ from flask.ext.admin.base import BaseView, expose
 from flask.ext.admin.actions import action, ActionsMixin
 
 from .models import db, User, Company, TypeformAPI
-from .forms import LoginForm
+from .forms import LoginForm, FileUploadFieldToCloudinary
 
 
 app_dir = os.path.realpath(os.path.join(os.path.dirname(__file__), os.pardir))
@@ -82,7 +82,7 @@ class CompanyView(sqla.ModelView):
 
     # Override form field to use Flask-Admin SelectField
     form_overrides = {
-        'logo': form.FileUploadField,
+        'logo': FileUploadFieldToCloudinary,
         'status': SelectField
     }
 
@@ -119,7 +119,7 @@ class CompanyView(sqla.ModelView):
         if not model.logo:
             return ''
 
-        return Markup('<a href="'+url_for('static', filename='images/logos/' + model.logo)+'" target="_blank">link</a>')
+        return Markup('<a href="'+ model.logo +'" target="_blank">link</a>')
 
     def _link_name(view, context, model, name):
         if not model.url or not model.name:
