@@ -90,6 +90,7 @@ class TypeformAPI:
         }
 
         r = requests.get(typeform_url, params=payload)
+        print r
         json_data = json.loads(r.text)
         self.questions = json_data['questions']
         self.responses = json_data['responses']
